@@ -1,0 +1,37 @@
+See my similar Google sheet project at:
+
+https://www.hackster.io/detox/transmit-esp8266-data-to-google-sheets-8fc617
+---------------------------------------------------------------------------
+
+
+For how to install the board manager for the ESP32 (new version) see:
+
+https://randomnerdtutorials.com/installing-the-esp32-board-in-arduino-ide-windows-instructions/
+
+--------------------------------------------------------------
+The included sketch works with the esp8266 or the esp32.  
+
+For the ESP32 uncomment:    #include "WiFi.h"
+
+for the ESP8266 uncomment:  #include "ESP8266WiFi.h"
+------------------------------------------------------------
+
+
+Replace the following generics with your configuration in the included Arduino sketch:
+
+Line 5-6:  
+Appropriate ESP library 
+
+line 26:  
+YOUR_HOST_HERE.mybluemix.net
+
+line 28-29  
+const char* MY_SSID = "YOUR_SSID HERE";
+const char* MY_PWD =  "Your_WiFi_Password_here";
+
+line 104
+client.print("GET /YOUR_NODE_RED_URL_EXTENTION?Tem...
+
+
+
+
