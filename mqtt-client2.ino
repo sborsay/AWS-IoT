@@ -65,7 +65,8 @@ void setup() {
 }
 
 void loop() {
-  char fakeData[100];
+  //If you need to increase buffer size, you need to change MQTT_MAX_PACKET_SIZE in PubSubClient.h
+  char fakeData[128];
 //choose your own number of variables and data types, but avoid data buffer size overload
   float var1 =  random(55,77); //fake number range, adjust as you like
   float var2 =  random(77,99);
