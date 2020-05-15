@@ -74,7 +74,9 @@ void loop()
   delay(200);
   float temp;
   float humi;
-  char envDataBuf[100]; //local data buffer
+  
+  //If you need to increase buffer size, you need to change MQTT_MAX_PACKET_SIZE in PubSubClient.h
+  char envDataBuf[128]; //local data buffer
 
   if (!TemperatureAndHumidityRead(&temp, &humi)) {
     SerialUSB.println("ERROR!");
