@@ -241,8 +241,8 @@ void pubSubCheckConnect() {
     Serial.print("PubSubClient connecting to: "); Serial.print(awsEndpoint);
     while ( ! pubSubClient.connected()) {
       Serial.print(".");
-      pubSubClient.connect("myThing518_3"); //Pub and Sub devices should have unique names(ClientID's)
-                                            // recomned that each have registered 'Thing'
+      pubSubClient.connect("<YOUR-THING-NAME>"); //Pub and Sub devices should have unique names(ClientID's)
+                                                 // recomned that each have registered 'Thing'
     }
     Serial.println(" connected");
     pubSubClient.subscribe("$aws/things/<YOUR-THING-HERE>/shadow/update/accepted");
