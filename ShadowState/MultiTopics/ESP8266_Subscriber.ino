@@ -213,6 +213,8 @@ void msgReceived(char* topic, byte* payload, unsigned int length) {
      tokArray[counter1++] = pch;
    //  Serial.println(counter1);    //uncomment this to mark string token position
   }
+   
+  // tokArray[counter1] = NULL;  //you may need to NULL end of array if you get a Seg Fault
 
   char * posArray[3] = { tokArray[0] + 14 };  //alter to grab different tokens and positions
   Serial.print("here is the temperature array element: ");
