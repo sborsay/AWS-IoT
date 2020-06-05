@@ -17,6 +17,8 @@ const char* password = "<YOUR-WIFI-PASSWORD>";
 
 const char* awsEndpoint = "<AWS-ID>-ats.iot.<AWS-REGION>.amazonaws.com";
 
+#define LED 2
+
 // Update the two certificate strings below. Paste in the text of your AWS 
 // device certificate and private key. Add a quote character at the start
 // of each line and a backslash, n, quote, space, backslash at the end 
@@ -121,8 +123,8 @@ void setup() {
   wiFiClient.setPrivateKey(private_pem_key);
   
   //You may not have a built in LED on your ESP32, if you do it's likely Pin2
-  pinMode(LED_BUILTIN, OUTPUT);
-  digitalWrite(LED_BUILTIN, HIGH); //turn LED off, active low
+  pinMode(LED, OUTPUT);
+  digitalWrite(LED, HIGH); //turn LED off, active low
 }
 
 unsigned long lastPublish;
@@ -155,9 +157,9 @@ sprintf(fakeData,"{\"state\": {\"reported\": {\"uptime\": %lu, \"temperature\": 
        
   for (int i = 0; i < 5; i++)
    {
-        digitalWrite(LED_BUILTIN, LOW); //your esp32 may not have a builtin_led
+        digitalWrite(LED, LOW); //your esp32 may not have a builtin_led
         delay(100);
-        digitalWrite(LED_BUILTIN, HIGH);
+        digitalWrite(LED, HIGH);
         delay(100);
      }//end for
   
