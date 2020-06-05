@@ -124,8 +124,7 @@ void setup() {
   
   //You may not have a built in LED on your ESP32, if you do it's likely Pin2
   pinMode(LED, OUTPUT);
-  digitalWrite(LED, HIGH); //turn LED off, active low
-}
+  digitalWrite(LED, LOW); //turn LED off
 
 unsigned long lastPublish;
 int msgCount;
