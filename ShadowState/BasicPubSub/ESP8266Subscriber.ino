@@ -182,7 +182,7 @@ void pubSubCheckConnect() {
     Serial.print("PubSubClient connecting to: "); Serial.print(awsEndpoint);
     while ( ! pubSubClient.connected()) {
       Serial.print(".");
-      pubSubClient.connect("<Your-Thing-Here>"); //If using Shadow service then topic publisher and subscriber must have DIFFERENT
+      pubSubClient.connect("<Your-Unique-ClientId>"); //If using Shadow service then topic publisher and subscriber must have DIFFERENT
                                                  //ClientID's here. Recommneded: Pub and Sub they their have own registered 'Thing'
     }
     Serial.println(" connected");
