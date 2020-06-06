@@ -17,7 +17,7 @@ const char* password = "<YOUR-WIFI-PASSWORD>";
 
 const char* awsEndpoint = "<AWS-ID>-ats.iot.<AWS-REGION>.amazonaws.com";
 
-#define LED 2
+#define LED 2 //change to whatever pin your LED is on
 
 // Update the two certificate strings below. Paste in the text of your AWS 
 // device certificate and private key. Add a quote character at the start
