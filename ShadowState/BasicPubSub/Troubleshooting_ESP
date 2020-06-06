@@ -1,0 +1,27 @@
+Troubleshooting ESP8266 and ESP32 connection issues.
+
+ A)
+Fatal Error Occurred: “Failed to connect to ESP32: Timed out waiting for packet header” error when trying to upload new code to your ESP32
+board. Some ESP32 development boards don’t go into flashing/uploading mode automatically when uploading a new code. 
+to solve this hold-down the “BOOT/FLASH” button for 2 seconds, (NOT EN/RESET), then release the button while it is trying to connect
+
+B)  Most current Generic ESP32 Modules use either the Board Manager "ESP32 Dev Module" or "DOIT ESP32 DEVKIT V1". 
+Often if you use the wrong Board manager your program will still load but you will get a seg fault immediatly
+while running your program.  If so, try another Board Manager in Arduino.
+
+
+1.  Make sure you are on a 2.4GHz network not 5GHz, the device only communicates at 2.4GHz
+
+2.  Make sure port 8883 isn't being blocked by your network admin, this is the port that MQTT(s) traditionally communicates on
+
+3.  Make sure your onboard device certificates are active have a policy attached and  match your AWS IoT Core region, the x509 should be fungible between regions
+
+4.  Dont overflow your Char, sprintf, or snprintf buffer.  MQTT requires payloads get sent by time and size over cycles.
+    if you overload the buffer it may not transmit or receive the payload.  If you make an extended payload use short names like (t,h, lat)
+    and small data types you can always convert these variable abbreviations to longer, explicit names once on the cloud.  You
+    can slo increase the size of your MQTT BUffer by changing the value of MQTT_MAX_PACKET_SIZE in PubSubClient.h from 128 to 512
+
+5.  If you aren't receiving your devices payload under your subscription topic in AWS IoT Core in the "test" tab,
+then go to the "Monitor" tab and see if your device is even connecting.  Often a device is actually connecting,
+but the payload isn't being received, the reason for this  is usually a problem with your device certificates.
+The device will connect but the payload wont pass through if your device certificates aren't exactly correct.
