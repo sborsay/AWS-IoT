@@ -1,0 +1,9 @@
+Mongoose OS relies on the AWS CLI you installed locally to use your AWS configuration 'SigV4" credentials to make certificates
+and a 'thing' in AWS IoT Core in your account with a shell script.  Therfore your AWS CLI region, endpoint, and certificates must
+all be in the same region, and in the same region as the AWS IoT Core console you are using to monitor and test with.
+
+Sigv4 consists of a 'User' with their own "Access key" and "Secret access key".  This is normally given to the superuser when you created
+your AWS Account.  However you can make additional 'Users' at any point in AWS IAM.  Just make sure any 'User' configuration for the
+AWS CLI has permissions to full access of AWS IoT Core.
+
+https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html
