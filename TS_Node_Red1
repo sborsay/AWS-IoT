@@ -11,4 +11,4 @@ by your Network Admin
 4.  Check the monitor tab in AWS IoT Core to see if you are establishing a connection. 
 If the monitor shows you connected to AWS IoT Core but no data is being transmitted
 to the AWS IoT 'Test' Console than it most likly is a problem with your Certificates
-not being valid, in the wrong region,  or being formatted in correctly
+not being valid, in the wrong region, or being formatted incorrectly
