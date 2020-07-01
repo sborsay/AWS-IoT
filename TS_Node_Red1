@@ -8,6 +8,9 @@ by your Network Admin
 
 3.  Make sure the network connecting to your device is at 2.4GHz and not 5GHz
 
+4.  Make sure you have activated your device certificates after you downloaded them and that
+they are tested and working in your region.
+
 4.  Check the monitor tab in AWS IoT Core to see if you are establishing a connection. 
 If the monitor shows you connected to AWS IoT Core but no data is being transmitted
 to the AWS IoT 'Test' Console than it most likly is a problem with your Certificates
