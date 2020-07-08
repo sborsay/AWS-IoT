@@ -8,7 +8,7 @@ ESP32 Version, just replace esp8266 library with WiFi.h library
 
 //-----------------------------------------------
 //This sketch is combined from Adafruit DHT sensor and tdicola for dht.h library
-//by Stephen Borsay www.embedded-IoT.net
+//by Stephen Borsay www.device2cloud.net
 
 
 
