@@ -10,7 +10,7 @@ aws2 --region us-west-2 iot-data publish --topic "myTopic" --cli-binary-format r
 
 aws2 --region us-west-2 iot-data publish --topic "myTopic" --payload IntcInVwdGltZVwiOiAxMjMsXCJ0ZW1wXCI6IDQ0LFwiaHVtaWRpdHlcIjogMzN9Ig==
 
-//test payload for AWS IoT Core
+//A test payload for the AWS IoT Core console
 
 {
 	"Temperature": 77,
