@@ -10,6 +10,14 @@ aws2 --region us-west-2 iot-data publish --topic "myTopic" --cli-binary-format r
 
 aws2 --region us-west-2 iot-data publish --topic "myTopic" --payload IntcInVwdGltZVwiOiAxMjMsXCJ0ZW1wXCI6IDQ0LFwiaHVtaWRpdHlcIjogMzN9Ig==
 
+//To upload a whole JSON file of sensor readings (your json file will be the path from your current working directory)
+
+aws2 --region us-west-2 iot-data publish --topic "myTopic" --cli-binary-format raw-in-base64-out --payload file://sample-json-file.json
+
+//To upload a whole JSON file of base64 encoded sensor readings (your json file will be the path from your current working directory)
+
+aws2 --region us-west-2 iot-data publish --topic "myTopic" --output json --payload file://base64.json
+
 //A test payload for the AWS IoT Core console
 
 {
