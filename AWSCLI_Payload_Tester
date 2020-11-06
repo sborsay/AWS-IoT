@@ -7,6 +7,10 @@ aws --region us-west-2 iot-data publish --topic "myTopic" --cli-binary-format ra
 
 aws2 --region us-west-2 iot-data publish --topic "myTopic" --cli-binary-format raw-in-base64-out --payload "{\"uptime\": 123,\"temp\": 44,\"humidity\": 33}"
 
+//If you want to encode your payload in base64 here is the equivalent payload from above encoded (using encoding online at https://www.base64encode.org/ )
+
+aws2 --region us-west-2 iot-data publish --topic "myTopic" --payload IntcInVwdGltZVwiOiAxMjMsXCJ0ZW1wXCI6IDQ0LFwiaHVtaWRpdHlcIjogMzN9Ig==
+
 //test payload for AWS IoT Core
 
 {
