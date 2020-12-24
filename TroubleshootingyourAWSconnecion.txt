@@ -22,6 +22,9 @@ Confirm you are using the correct virtulization package or board manager for you
 
 SOME ESP32 Boards:
 
-holding down the Boot button and pressing the EN button initiates the firmware download mode
+Connecting........_____....._____....._____....._____....._____....._____....._____....._____....._____....._____
+A fatal error occurred: Failed to connect to ESP32: Timed out waiting for packet header
 
+Solution:
+holding down the Boot button and pressing the EN button initiates the firmware download mode
 BOOT = FLASH: if you hold it down and press the EN/RST, your ESP32 will restart in flashing/uploading mode
