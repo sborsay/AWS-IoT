@@ -16,3 +16,5 @@ Troubleshooting ESP8266 and ESP32 connection issues.
 then go to the "Monitor" tab and see if your device is even connecting.  Often a device is actually connecting,
 but the payload isn't being received, the reason for this  is usually a problem with your device certificates.
 The device will connect but the payload wont pass through if your device certificates aren't exactly correct.
+If your device isn't even ahowing up in the Monitor then it is likely a hardware issue not a certificate issue.
+Confirm you are using the correct virtulization package or board manager for your device.
