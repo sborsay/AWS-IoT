@@ -1,13 +1,16 @@
 /*
 
+This sketch is based on the work of:
+https://github.com/256dpi/arduino-mqtt/blob/master/examples/ESP32DevelopmentBoardSecure
 
-
-
+modfied for AWS and provided on AWS-Samples found Here:
+https://github.com/aws-samples/lets-build-on-aws-iot
 
 */
 
 #include <WiFiClientSecure.h>
-#include <MQTTClient.h>  //download this library from 
+#include <MQTTClient.h>  //download this library: MQTT by Joel Gahwiler (Search for lwmqtt)
+
 
 #include "secrets.h"
 
