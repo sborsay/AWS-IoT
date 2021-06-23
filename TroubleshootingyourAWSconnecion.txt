@@ -11,11 +11,12 @@ Troubleshooting ESP8266 and ESP32 connection issues.
 4.  Make sure you attached an AWS IoT Policy to your security certificates.  If you have not you will see the connection on the 
     monitor tab but no data will appear on the MQTT test console.
 
-5.  Dont overflow your Char, sprintf, or snprintf buffer.  MQTT requires payloads get sent by time and size over cycles.
-    if you overload the buffer it may not transmit or receive the payload.  If you make an extended payload use short names like (t,h, lat)
-    and small data types you can always convert these variable abbreviations to longer, explicit names once on the cloud.  You
-    can also increase the size of your MQTT BUffer by changing the value of MQTT_MAX_PACKET_SIZE in PubSubClient.h from 128 to 512
-    to solve this issue.  This bigger payload allocation will allow longer variable names to transmit
+5.  Don't exceed your Char, sprintf, or snprintf buffer.  MQTT requires payloads get sent by time and size over cycles.
+    if you overload the buffer it may not transmit or receive the payload.   To solve this issue for large payloads you
+    can also increase the size of your MQTT BUffer by changing the value of MQTT_MAX_PACKET_SIZE in PubSubClient.h from 128 to 512.
+    to solve this issue.  This bigger payload allocation will allow longer variable names to transmit.  If you use the alternate ESP32
+    In the alternate ESP32 sketch on my github the buffer is set to 512 automatically by this line:  MQTTClient client = MQTTClient(512);
+    This alternate ESP32 sketch uses a different PubSub/MQTT library but operates fundamentally in the same way
 
 6.  If you aren't receiving your devices payload under your subscription topic in AWS IoT Core in the "test" tab,
     then go to the "Monitor" tab and see if your device is even connecting.  Often a device is actually connecting,
