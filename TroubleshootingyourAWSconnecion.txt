@@ -19,12 +19,13 @@ but the payload isn't being received, the reason for this  is usually a problem 
 The device will connect but the payload wont pass through if your device certificates aren't exactly correct.
 If your device isn't even ahowing up in the Monitor then it is likely a hardware issue not a certificate issue.
 Confirm you are using the correct virtulization package or board manager for your device.
-
-SOME ESP32 Boards:
+----------------------------------------------------------------------------
+Some older or cheaper ESP32 Boards:
 
 Connecting........_____....._____....._____....._____....._____....._____....._____....._____....._____....._____
 A fatal error occurred: Failed to connect to ESP32: Timed out waiting for packet header
 
 Solution:
-holding down the Boot button and pressing the EN button initiates the firmware download mode
+while connecting holding down the Boot/EN button for one second initiates the firmware download mode
 BOOT = FLASH: if you hold it down and press the EN/RST, your ESP32 will restart in flashing/uploading mode
+Do not press the RESET Button
