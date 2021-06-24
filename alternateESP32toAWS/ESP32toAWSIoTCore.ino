@@ -9,7 +9,7 @@ https://github.com/aws-samples/lets-build-on-aws-iot
 */
 
 #include <WiFiClientSecure.h>
-#include <MQTTClient.h>  //download this library: MQTT by Joel Gahwiler (Search for lwmqtt)
+#include <MQTTClient.h>  //download this library: MQTT by Joël Gähwiler  (Search for lwmqtt)
 
 
 #include "secrets.h"
