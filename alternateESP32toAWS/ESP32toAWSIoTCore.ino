@@ -1,11 +1,13 @@
 /*
 
 This sketch is based on the work of:
-https://github.com/256dpi/arduino-mqtt/blob/master/examples/ESP32DevelopmentBoardSecure
+github.com/256dpi/arduino-mqtt/blob/master/examples/ESP32DevelopmentBoardSecure
 
 modfied for AWS and provided on AWS-Samples found Here:
-https://github.com/aws-samples/lets-build-on-aws-iot
+github.com/aws-samples/lets-build-on-aws-iot
 
+Message buffer and adjustable delay to publish added by Stephen Borsay:
+github.com/sborsay/AWS-IoT/tree/master/alternateESP32toAWS
 */
 
 #include <WiFiClientSecure.h>
@@ -44,9 +46,6 @@ void connectAWS() {
 
   Serial.println("AWS IoT Connected!");
 }
- 
- 
-
 
 void connectWiFi() {
   Serial.println("Connecting");
@@ -101,7 +100,6 @@ if (millis() - lastMillis > 1000) {
   // Publish to a topic
   client.publish(AWS_IOT_PUBLISH_TOPIC, fakeData);
 
-   }//end millis()
-
+   }//end millis() delay
  
 }
