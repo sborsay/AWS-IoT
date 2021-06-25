@@ -3,7 +3,7 @@
 
 const char AWS_IOT_ENDPOINT[] = "a32xxxxxxxes-ats.iot.us-east-1.amazonaws.com";
 
-// Amazon Root CA 1
+// Amazon Root CA 1 - I dont' care if you use mine, fungible between regions
 static const char AWS_CERT_CA[] PROGMEM = R"EOF(
 -----BEGIN CERTIFICATE-----
 MIIDQTCCAimgAwIBAgITBmyfz5m/jAo54vB4ikPmljZbyjANBgkqhkiG9w0BAQsF
