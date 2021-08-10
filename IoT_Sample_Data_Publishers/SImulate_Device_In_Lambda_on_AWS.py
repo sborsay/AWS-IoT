@@ -14,9 +14,9 @@ import time
 
 deviceNames = ['SBS01', 'SBS02', 'SBS03', 'SBS04', 'SBS05']
 
-iot = boto3.client('iot-data');  #iot = boto3.client('iot-data');  #'a32qaa131oyees.iot.us-east-2.amazonaws.com'
+iot = boto3.client('iot-data');  #iot = boto3.client('iot-data');  #'a3vvvvvvvees.iot.us-east-2.amazonaws.com'
 #    myAWSIoTMQTTClient.configureEndpoint(host, port)
-#iot.configureEndpoint('a32qaa131oyees-ats.iot.eu-west-1.amazonaws.com', 8883)
+#iot.configureEndpoint('a32qvvvvvvyees-ats.iot.eu-west-1.amazonaws.com', 8883)
 
 
 # generate Flow values
