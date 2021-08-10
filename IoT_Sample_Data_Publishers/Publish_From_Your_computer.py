@@ -1,6 +1,11 @@
+#  Original can be found here https://github.com/garystafford/aws-iot-analytics-demo/blob/master/sample_data/send_sample_messages.py
+#  Author Gary Stafford at AWS
+#  Replace smaple JSON in this folder with your own JSON
+#  Remeber Boto3 knows your AWS credentials from the AWS CLI So use ot in your home region
+#  You can download Boto3 via --> **pip install boto3**
+
 import argparse
 import json
-
 import boto3
 
 
