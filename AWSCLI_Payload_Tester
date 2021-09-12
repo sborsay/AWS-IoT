@@ -1,8 +1,9 @@
+##Part 1 AWS CLI ys=using MQTT (no certs) to IoT Core (MQTT test client: Subscribe) ##
+
 //check your current AWS IoT Core Region
 
 //By default, the AWS CLI version 2 now passes all binary input and binary output parameters as base64-encoded strings. A parameter that requires binary
 //input has its type specified as blob (binary large object) in the documentation.
-
 
 aws --region us-west-2 iot-data publish --topic "myTopic" --cli-binary-format raw-in-base64-out --payload "{\"uptime\": 123,\"temp\": 44,\"humidity\": 33}"
 
@@ -39,4 +40,18 @@ aws --region us-west-2 iot-data publish --topic "myTopic" --output json --payloa
 			{ "id": "5003", "type": "Chocolate" },
 			{ "id": "5004", "type": "Maple" }
 		]
+		
+---------------------------------------------------------------------------------------------
 
+##Part 2 HTTPs with certs to IoT Core (MQTT test client: Subscribe) ##
+
+//check your current AWS IoT Core Region
+
+//Use curl commands in same dirctory as curl.exe or you may receive error: 
+// _curl: (35) schannel: failed to receive handshake, SSL/TLS connection failed_
+
+//Insert all three of your enabled and activated device certificates into the same directory to make things easy with pathing
+
+curl --tlsv1.2 --cacert Amazon-root-CA-1.pem --cert device.pem.crt --key private.pem.key --request POST --data "{"Temperature": 77, "Humidity": 88, "Time": 12349876,"Device_ID": "device_4"}" "https://a32qxxxkugfxxxx-ats.iot.us-east-1.amazonaws.com:8443/topics/myTopic?qos=1"
+
+//Free online  tool to help add backslashs to normal JSON (Escaping): https://onlinejsontools.com/escape-json
