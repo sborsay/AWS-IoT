@@ -43,7 +43,7 @@ aws --region us-west-2 iot-data publish --topic "myTopic" --output json --payloa
 		
 ---------------------------------------------------------------------------------------------
 
-##Part 2 HTTPs with certs to IoT Core (MQTT test client: Subscribe) ##
+##Part 2 HTTPs with certs to IoT Core (MQTT test client: Subscribe)##
 
 //check your current AWS IoT Core Region
 
