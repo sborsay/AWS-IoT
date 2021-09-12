@@ -53,6 +53,6 @@ aws --region us-west-2 iot-data publish --topic "myTopic" --output json --payloa
 //Insert all three of your enabled and activated device certificates into the same directory to make things easy with pathing
 //insert your own AWS IoT endpoint and topic name (myTopic)
 
-curl --tlsv1.2 --cacert Amazon-root-CA-1.pem --cert device.pem.crt --key private.pem.key --request POST --data "{"Temperature": 77, "Humidity": 88, "Time": 12349876,"Device_ID": "device_4"}" "https://a32qxxxkugfxxxx-ats.iot.us-east-1.amazonaws.com:8443/topics/myTopic?qos=1"
+curl --tlsv1.2 --cacert Amazon-root-CA-1.pem --cert device.pem.crt --key private.pem.key --request POST --data "{\"Temperature\": 77, \"Humidity\": 88, \"Time\": 12349876,\"Device_ID\": \"device_4\"}" "https://a32qxxxkugfxxx-ats.iot.us-east-1.amazonaws.com:8443/topics/myTopic?qos=1"
 
 //Free online  tool to help add backslashs to normal JSON (Escaping): https://onlinejsontools.com/escape-json
