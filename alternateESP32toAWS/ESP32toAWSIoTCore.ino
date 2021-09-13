@@ -2,6 +2,8 @@
 
 This sketch is based on the work of:
 github.com/256dpi/arduino-mqtt/blob/master/examples/ESP32DevelopmentBoardSecure
+and
+https://github.com/copercini/esp32-iot-examples/blob/master/ESP32_aws_iot/ESP32_aws_iot.ino
 
 modfied for AWS and provided on AWS-Samples found Here:
 github.com/aws-samples/lets-build-on-aws-iot
