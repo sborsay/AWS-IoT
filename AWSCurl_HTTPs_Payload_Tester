@@ -2,7 +2,6 @@ HTTPs with certs to IoT Core (MQTT test client: Subscribe)##
 
 //check your current AWS IoT Core Region
 
-
 //Insert all three of your enabled and activated device certificates into the same directory (with curl.exe to make things easy with pathing)
 //Use cURL commands in same dirctory as curl.exe or you may receive error: 
 // _curl: (35) schannel: failed to receive handshake, SSL/TLS connection failed_
