@@ -1,4 +1,4 @@
-##Part 1 AWS CLI ys=using MQTT (no certs) to IoT Core (MQTT test client: Subscribe) ##
+##Part 1 AWS CLI using MQTT (no certs) to IoT Core (MQTT test client: Subscribe) ##
 
 //check your current AWS IoT Core Region
 
