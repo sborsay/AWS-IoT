@@ -2,11 +2,12 @@ HTTPs with certs to IoT Core (MQTT test client: Subscribe)##
 
 //check your current AWS IoT Core Region
 
-//Use curl commands in same dirctory as curl.exe or you may receive error: 
+
+//Insert all three of your enabled and activated device certificates into the same directory (with curl.exe to make things easy with pathing)
+//Use cURL commands in same dirctory as curl.exe or you may receive error: 
 // _curl: (35) schannel: failed to receive handshake, SSL/TLS connection failed_
 
-//Insert all three of your enabled and activated device certificates into the same directory to make things easy with pathing
-//insert your own AWS IoT endpoint and topic name (myTopic)
+//insert your own AWS IoT endpoint and topic name (here i called the topic: "myTopic")
 
 curl --tlsv1.2 --cacert Amazon-root-CA-1.pem --cert device.pem.crt --key private.pem.key --request POST --data "{\"Temperature\": 77, \"Humidity\": 88, \"Time\": 12349876,\"Device_ID\": \"device_4\"}" "https://a32qxxxkugfxxx-ats.iot.us-east-1.amazonaws.com:8443/topics/myTopic?qos=1"
 
