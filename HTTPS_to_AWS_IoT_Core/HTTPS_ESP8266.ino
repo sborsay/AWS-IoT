@@ -200,7 +200,7 @@ void loop() {
   delay(10000);  // myClient.stop must be placed after some delay
   wiFiClient.stop();  //prevents heap colliding with stack, remember, no automatic garbage collection in C/C++
                       //This is a problem with the ESP32 but not usually the ESP8266 for some reason
-                      //Compiler optimization may be better in freeing out of scope object memory in the ESP8266 than the ESP32
+                      //Compiler optimization may be better at freeing out of scope object memory in the ESP8266 than the ESP32
 
 }
 
