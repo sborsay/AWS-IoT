@@ -6,6 +6,16 @@
  * github.com/sborsay
  * Add in Char buffer utilizing sprintf to dispatch JSON data to AWS IoT Core
  * Use and replace your own SID, PW, AWS Account Endpoint, Client cert, private cert, x.509 CA root Cert
+ 
+  ----------------------------
+ 
+ ##Compile this only if using ESP8266 version 3+, not backwards comparable
+ 
+ #Tools--> Board--> Board Manager-->ESP8266 version 3+ by ESP8266 Community
+ 
+ ##Older ESP8266 sketch is not forward compatible
+ 
+ --------------------------------
  * 
  * also
  * github.com/espressif/arduino-esp32/blob/master/libraries/WiFiClientSecure/examples/WiFiClientSecure/WiFiClientSecure.ino
