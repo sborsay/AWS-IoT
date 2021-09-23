@@ -1,6 +1,6 @@
 /* ESP8266 HTTPS to AWS IoT
  *  Tested with ESP8266 Board Manager 2.74, version 3+ may not work, may need BEARSSL cert adjustment
- * Author: Anthony Elder and Earle F. Philhower, III
+ * Authors: Anthony Elder and Earle F. Philhower, III, Rui Santos and other sketches I pilfered for inspiration.
  * Sketch Modified by Stephen Borsay for www.udemy.com and my AWS IoT Live Workshops
  * License: Apache License v2
  * github.com/sborsay
@@ -200,6 +200,7 @@ void loop() {
   delay(10000);  // myClient.stop must be placed after some delay
   wiFiClient.stop();  //prevents heap colliding with stack, remember, no automatic garbage collection in C/C++
                       //This is a problem with the ESP32 but not usually the ESP8266 for some reason
+                      //Compiler optimization may be better in freeing out of scope object memory in the ESP8266 than the ESP32
 
 }
 
