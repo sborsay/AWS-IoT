@@ -36,7 +36,7 @@ for (( i = 1; i <= $iterations; i++)) {
   echo "humidity: $HUMIDITY"
   echo "vibration: $VIBRATION"
 
- aws2 iot-data publish --topic "$mqtttopic" --cli-binary-format raw-in-base64-out --payload "{\"deviceid\":\"$DEVICE\",\"current_ts\":$CURRENT_TS,\"flow\":$FLOW,\"temp\":$TEMP,\"humidity\":$HUMIDITY,\"vibration\":$VIBRATION}" --profile "$profile" --region "$region"
+ aws iot-data publish --topic "$mqtttopic" --cli-binary-format raw-in-base64-out --payload "{\"deviceid\":\"$DEVICE\",\"current_ts\":$CURRENT_TS,\"flow\":$FLOW,\"temp\":$TEMP,\"humidity\":$HUMIDITY,\"vibration\":$VIBRATION}" --profile "$profile" --region "$region"
 
   sleep $wait
 }
