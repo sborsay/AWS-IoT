@@ -6,7 +6,7 @@
  
  #Tools--> Board--> Board Manager-->ESP8266 version 3+ by ESP8266 Community
  
- ##Older ESP8266 sketch is not forward compatable
+ ##Older ESP8266 sketch is not forward compatible
  
  --------------------------------
  
