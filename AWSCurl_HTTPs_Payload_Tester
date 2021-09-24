@@ -1,13 +1,13 @@
 HTTPs with certs to IoT Core (MQTT test client: Subscribe)
 
 The CA certificate file (Amazon-root-CA-1.pem in this example).
-The client's certificate file (device.pem.crt in this example).
+The client's certificate file (client.pem.crt in this example).
 The client's private key file (private.pem.key in this example).
 Create the curl command line, replacing the replaceable values for those of your account and system.
 
 curl --tlsv1.2 \
     --cacert Amazon-root-CA-1.pem \
-    --cert device.pem.crt \
+    --cert client.pem.crt \
     --key private.pem.key \
     --request POST \
     --data "{ \"message\": \"Hello, world\" }" \
@@ -16,12 +16,12 @@ curl --tlsv1.2 \
 //check your current AWS IoT Core Region
 //change the nme of your certicifates to: 
 
-a04r7f8e71-certificate.pem  -->  device.pem
+a04r7f8e71-certificate.pem  --> client.pem
 a04r7f8ee71-private.pem.key --> private.pem.key
 
 //insert your own AWS IoT endpoint and topic name (here i called the topic: "myTopic")
 
-curl --tlsv1.2 --cacert Amazon-root-CA-1.pem --cert device.pem.crt --key private.pem.key --request POST --data "{\"Temperature\": 77, \"Humidity\": 88, \"Time\": 12349876,\"Device_ID\": \"device_4\"}" "https://a32qxxxkugfxxx-ats.iot.us-east-1.amazonaws.com:8443/topics/myTopic?qos=1"
+curl --tlsv1.2 --cacert Amazon-root-CA-1.pem --cert client.pem.crt --key private.pem.key --request POST --data "{\"Temperature\": 77, \"Humidity\": 88, \"Time\": 12349876,\"Device_ID\": \"device_4\"}" "https://a32qxxxkugfxxx-ats.iot.us-east-1.amazonaws.com:8443/topics/myTopic?qos=1"
 
 Troubleshooting:
 1.  "Use cURL commands in same dirctory as curl.exe or you may receive error: 
@@ -32,7 +32,7 @@ Troubleshooting:
 2.  "curl: (60) SSL certificate problem: unable to get local issuer certificate" or,
 curl: (35) schannel: next InitializeSecurityContext failed: CRYPT_E_REVOKED (0x80092010) - The certificate is revoked.
 Solution:  use the -k flag
-curl --tlsv1.2 -k --cacert Amazon-root-CA-1.pem --cert device.pem.crt --key private.pem.key --request POST --data "{\"Temperature\": 77, \"Humidity\": 88, \"Time\": 12349876,\"Device_ID\": \"device_4\"}" "https://a32qxxxkugfxxx-ats.iot.us-east-1.amazonaws.com:8443/topics/myTopic?qos=1"
+curl --tlsv1.2 -k --cacert Amazon-root-CA-1.pem --cert client.pem.crt --key private.pem.key --request POST --data "{\"Temperature\": 77, \"Humidity\": 88, \"Time\": 12349876,\"Device_ID\": \"device_4\"}" "https://a32qxxxkugfxxx-ats.iot.us-east-1.amazonaws.com:8443/topics/myTopic?qos=1"
 
 
 //Free online  tool to help add backslashs to normal JSON (Escaping): https://onlinejsontools.com/escape-json
