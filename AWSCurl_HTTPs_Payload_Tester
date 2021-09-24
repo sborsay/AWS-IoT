@@ -1,17 +1,10 @@
-HTTPs with certs to IoT Core (MQTT test client: Subscribe)##
-
-
+HTTPs with certs to IoT Core (MQTT test client: Subscribe)
 
 //check your current AWS IoT Core Region
 //change the nme of your certicifates to: 
 
 a04r7f8e71-certificate.pem  -->  device.pem
 a04r7f8ee71-private.pem.key --> private.pem.key
-
-
-
-
-
 
 //insert your own AWS IoT endpoint and topic name (here i called the topic: "myTopic")
 
@@ -21,7 +14,6 @@ curl --tlsv1.2 --cacert Amazon-root-CA-1.pem --cert device.pem.crt --key private
 //Use cURL commands in same dirctory as curl.exe or you may receive error: 
 // _curl: (35) schannel: failed to receive handshake, SSL/TLS connection failed_
 //Insert all three of your enabled and activated device certificates into the same directory (with curl.exe to make things easy with pathing)
-
 
 //Free online  tool to help add backslashs to normal JSON (Escaping): https://onlinejsontools.com/escape-json
 //more info at https://docs.aws.amazon.com/iot/latest/developerguide/http.html
