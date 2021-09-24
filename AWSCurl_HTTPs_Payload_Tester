@@ -1,5 +1,18 @@
 HTTPs with certs to IoT Core (MQTT test client: Subscribe)
 
+The CA certificate file (Amazon-root-CA-1.pem in this example).
+The client's certificate file (device.pem.crt in this example).
+The client's private key file (private.pem.key in this example).
+Create the curl command line, replacing the replaceable values for those of your account and system.
+
+curl --tlsv1.2 \
+    --cacert Amazon-root-CA-1.pem \
+    --cert device.pem.crt \
+    --key private.pem.key \
+    --request POST \
+    --data "{ \"message\": \"Hello, world\" }" \
+    "https://IoT_data_endpoint:8443/topics/topic?qos=1"
+
 //check your current AWS IoT Core Region
 //change the nme of your certicifates to: 
 
