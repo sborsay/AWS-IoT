@@ -24,9 +24,14 @@ a04r7f8ee71-private.pem.key --> private.pem.key
 curl --tlsv1.2 --cacert Amazon-root-CA-1.pem --cert device.pem.crt --key private.pem.key --request POST --data "{\"Temperature\": 77, \"Humidity\": 88, \"Time\": 12349876,\"Device_ID\": \"device_4\"}" "https://a32qxxxkugfxxx-ats.iot.us-east-1.amazonaws.com:8443/topics/myTopic?qos=1"
 
 Troubleshooting:
-//Use cURL commands in same dirctory as curl.exe or you may receive error: 
-// _curl: (35) schannel: failed to receive handshake, SSL/TLS connection failed_
+1.  "Use cURL commands in same dirctory as curl.exe or you may receive error: 
+ _curl: (35) schannel: failed to receive handshake, SSL/TLS connection failed_"
+ Solution:
 //Insert all three of your enabled and activated device certificates into the same directory (with curl.exe to make things easy with pathing)
+
+2.  "curl: (60) SSL certificate problem: unable to get local issuer certificate"
+Solution:  use the -k flag
+curl --tlsv1.2 -k --cacert Amazon-root-CA-1.pem --cert device.pem.crt --key private.pem.key --request POST --data "{\"Temperature\": 77, \"Humidity\": 88, \"Time\": 12349876,\"Device_ID\": \"device_4\"}" "https://a32qxxxkugfxxx-ats.iot.us-east-1.amazonaws.com:8443/topics/myTopic?qos=1"
 
 
 //Free online  tool to help add backslashs to normal JSON (Escaping): https://onlinejsontools.com/escape-json
