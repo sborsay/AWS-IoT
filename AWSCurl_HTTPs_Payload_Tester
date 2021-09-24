@@ -10,10 +10,13 @@ a04r7f8ee71-private.pem.key --> private.pem.key
 
 curl --tlsv1.2 --cacert Amazon-root-CA-1.pem --cert device.pem.crt --key private.pem.key --request POST --data "{\"Temperature\": 77, \"Humidity\": 88, \"Time\": 12349876,\"Device_ID\": \"device_4\"}" "https://a32qxxxkugfxxx-ats.iot.us-east-1.amazonaws.com:8443/topics/myTopic?qos=1"
 
-
+Troubleshooting:
 //Use cURL commands in same dirctory as curl.exe or you may receive error: 
 // _curl: (35) schannel: failed to receive handshake, SSL/TLS connection failed_
 //Insert all three of your enabled and activated device certificates into the same directory (with curl.exe to make things easy with pathing)
+
+//curl: (35) schannel: next InitializeSecurityContext failed: CRYPT_E_REVOKED (0x80092010) - The certificate is revoked.
+//check that you changesd the certificate names to match the names in your curl command
 
 //Free online  tool to help add backslashs to normal JSON (Escaping): https://onlinejsontools.com/escape-json
 //more info at https://docs.aws.amazon.com/iot/latest/developerguide/http.html
