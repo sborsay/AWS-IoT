@@ -2,6 +2,7 @@
 
 This sketch is based on the work of:
 github.com/256dpi/arduino-mqtt/blob/master/examples/ESP32DevelopmentBoardSecure
+https://github.com/debsahu/ESP-MQTT-AWS-IoT-Core/tree/master/Arduino/PubSubClient
 and
 https://github.com/copercini/esp32-iot-examples/blob/master/ESP32_aws_iot/ESP32_aws_iot.ino
 
