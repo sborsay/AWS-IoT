@@ -32,9 +32,6 @@ extern "C" {
 
 #include <WiFiClientSecure.h> 
 
-//Link to read data from https://jsonplaceholder.typicode.com/comments?postId=7
-//Web/Server address to read/write from 
-
 const char* ssid = "NETWORK";  //your WiFi network
 const char* password = "myPassword";  //Your WiFi password
 
