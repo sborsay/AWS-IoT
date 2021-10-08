@@ -39,7 +39,7 @@ const char* password = "myPassword";  //Your WiFi password
 const char *host = "a3iknowkungfus-ats.iot.us-east-1.amazonaws.com"; //AWS IoT Core--> Settings (Device data endpoint)
 const int httpsPort = 8443; //typical values are HTTPS= 443, MQTT=8883, and HTTP = 80 but AWS IoT Core uses 84443 for HTTP(s) Certificate secured
 //AWS IoT Topic Subscribe to "myTopic" in MQTT test client
-const char *uri = "/topics/myTopic?qos=1";  //see https://docs.aws.amazon.com/iot/latest/developerguide/http.html
+const char *uri = "/topics/outTopic?qos=1";  //see https://docs.aws.amazon.com/iot/latest/developerguide/http.html
 
 
 // For the two certificate strings below paste in the text of your AWS 
