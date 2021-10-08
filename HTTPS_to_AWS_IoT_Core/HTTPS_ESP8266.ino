@@ -1,6 +1,6 @@
 /* ESP8266 HTTPS to AWS IoT
  *  Tested with ESP8266 Board Manager 2.74, version 3+ may not work, may need BEARSSL cert adjustment
- * Authors: Anthony Elder and Earle F. Philhower, III, Rui Santos and other sketches I pilfered for inspiration.
+ * Authors: Anthony Elder, Earle F. Philhower, III, Rui Santos and other sketches I pilfered for inspiration.
  * Sketch Modified by Stephen Borsay for www.udemy.com and my AWS IoT Live Workshops
  * License: Apache License v2
  * github.com/sborsay
