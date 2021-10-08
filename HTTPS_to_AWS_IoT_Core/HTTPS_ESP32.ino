@@ -1,9 +1,9 @@
 /* ESP32 HTTP(s) Certificate Secured to AWS IoT
  *  
- * Author: Anthony Elder and Earle F. Philhower, III
+ * Author: Anthony Elder, Earle F. Philhower-3, Rui Santos,  various others
  * License: Apache License v2
  * Sketch Modified by Stephen Borsay for www.udemy.com and my AWS IoT Live Workshops
- * myClient://github.com/sborsay
+ * github.com/sborsay
  * Add in Char buffer utilizing sprintf to dispatch JSON data to AWS IoT Core
  * Use and replace your own SID, PW, AWS Account Endpoint, Client cert, private cert, x.509 CA root Cert
  * 
@@ -25,7 +25,7 @@ const char* host = "aiknowkungfues-ats.iot.us-east-1.amazonaws.com"; //AWS IoT C
 const int Port = 8443;  //typical values are HTTPS= 443, MQTT=8883, and HTTP = 80 but AWS IoT Core uses 84443 for HTTP(s) Certificate secured
 
 //AWS IoT Topic Subscribe to "myTopic" in MQTT test client
-const char *uri = "/topics/myTopic?qos=1";  //see https://docs.aws.amazon.com/iot/latest/developerguide/http.html
+const char *uri = "/topics/outTopic?qos=1";  //see https://docs.aws.amazon.com/iot/latest/developerguide/http.html
 
 
 // xxxxxxxxxx-certificate.pem.crt
