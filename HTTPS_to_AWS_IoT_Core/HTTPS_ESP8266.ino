@@ -1,4 +1,5 @@
 /* ESP8266 HTTPS to AWS IoT
+ * TESTED TO WORK ON ARDUINO 1.8.16 WITH ESP8266 BOARD PACKAGE VERSION 2.74
  *  Tested with ESP8266 Board Manager 2.74, version 3+ may not work, may need BEARSSL cert adjustment
  * Authors: Anthony Elder, Earle F. Philhower, III, Rui Santos and other sketches I pilfered for inspiration.
  * Sketch Modified by Stephen Borsay for www.udemy.com and my AWS IoT Live Workshops
@@ -9,9 +10,9 @@
  
   ----------------------------
  
- ### Compile this only if using ESP8266 version 3+, not backwards comparable
+ ### Compile this only if using ESP8266 board manager version below 3.0, not backwards comparable
  
- ## Tools--> Board--> Board Manager-->ESP8266 version 3+ by ESP8266 Community
+ ## Tools--> Board--> Board Manager-->ESP8266 version under 3.0 by ESP8266 Community
  
  ### Older ESP8266 sketch is not forward compatible
  
@@ -32,13 +33,13 @@ extern "C" {
 
 #include <WiFiClientSecure.h> 
 
-const char* ssid = "NETWORK";  //your WiFi network
-const char* password = "myPassword";  //Your WiFi password
+const char* ssid = "YOUR NETWORK";  //your WiFi network
+const char* password = "YOUR Password";  //Your WiFi password
 
 
 const char *host = "a3iknowkungfus-ats.iot.us-east-1.amazonaws.com"; //AWS IoT Core--> Settings (Device data endpoint)
 const int httpsPort = 8443; //typical values are HTTPS= 443, MQTT=8883, and HTTP = 80 but AWS IoT Core uses 84443 for HTTP(s) Certificate secured
-//AWS IoT Topic Subscribe to "myTopic" in MQTT test client
+//AWS IoT Topic Subscribe to outTopic" in MQTT test client
 const char *uri = "/topics/outTopic?qos=1";  //see https://docs.aws.amazon.com/iot/latest/developerguide/http.html
 
 
@@ -183,8 +184,8 @@ void loop() {
   
 
   char fakeData[128]; 
-  float temperature =  random(25,97); //fake number range, adjust as you like  
-  float humidity =  random(77,99);  
+  float temperature =  random(25,99); //fake number range, adjust as you like  
+  float humidity =  random(50,99);  
   sprintf(fakeData,  "{\"uptime\":%lu,\"temp\":%f,\"humid\":%f}", millis() / 1000, temperature, humidity); // JSON Object with escapes
                                                                                                            //Use %d instead of %f to save memory space
 
