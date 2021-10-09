@@ -5,11 +5,12 @@
 ```
   
  ## BEARSSL certificate handling changed for Board Package 3+ on the ESP8266
- ## See other folder for ESP8266 Sketch using Board package 3.0 and above
+ ## See folder "ESP8266_BoardPackage3" for ESP8266 Sketch using Board package 3.0 and above
  
- # Tested on ESP8266 Board Pacakge 2.74
+ # This ESP8266 version sketch tested on ESP8266 Board Pacakge 2.74
  # Tools--> Board--> Board Manager-->ESP8266 version 2.74 by ESP8266 Community
  
  ## Older ESP8266 sketch is not forward compitable
+ ## ESP32 not affected
  
  --------------------------------
