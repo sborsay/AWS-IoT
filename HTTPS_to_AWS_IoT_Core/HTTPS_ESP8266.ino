@@ -183,7 +183,7 @@ void loop() {
   }
   
 
-  char fakeData[128]; 
+  char fakeData[256]; 
   float temperature =  random(25,99); //fake number range, adjust as you like  
   float humidity =  random(50,99);  
   sprintf(fakeData,  "{\"uptime\":%lu,\"temp\":%f,\"humid\":%f}", millis() / 1000, temperature, humidity); // JSON Object with escapes
