@@ -1,5 +1,5 @@
 /* ESP32 HTTP(s) Certificate Secured to AWS IoT
- *  
+ * TESTED TO WORK ON ARDUINO 1.8.16 WITH ESP32 BOARD PACKAGE VERSION 1.0.6
  * Author: Anthony Elder, Earle F. Philhower-3, Rui Santos,  various others
  * License: Apache License v2
  * Sketch Modified by Stephen Borsay for www.udemy.com and my AWS IoT Live Workshops
@@ -24,7 +24,7 @@ const char* password = "xxxxxxxxxxxxxx";  //your wifi password
 const char* host = "aiknowkungfues-ats.iot.us-east-1.amazonaws.com"; //AWS IoT Core--> Settings (Device data endpoint)
 const int Port = 8443;  //typical values are HTTPS= 443, MQTT=8883, and HTTP = 80 but AWS IoT Core uses 84443 for HTTP(s) Certificate secured
 
-//AWS IoT Topic Subscribe to "myTopic" in MQTT test client
+//AWS IoT Topic Subscribe to "outTopic" in MQTT test client
 const char *uri = "/topics/outTopic?qos=1";  //see https://docs.aws.amazon.com/iot/latest/developerguide/http.html
 
 
