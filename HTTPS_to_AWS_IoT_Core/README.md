@@ -1,6 +1,6 @@
  ----------------------------
  
- ## Compile this only if using ESP8266 version under 3.0, not backwards comparable
+ ## Compile this only if using ESP8266 Board Package version under 3.0, not backwards comparable
  ## BEARSSL certificate handling changed after Board Package 3 on the ESP8266
  ## See other folder for ESP8266 Sketch using Board package 3.0 and above
  
