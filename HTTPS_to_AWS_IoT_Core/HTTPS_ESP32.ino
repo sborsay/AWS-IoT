@@ -152,13 +152,13 @@ void loop() {
   }
   
   
-  char fakeData[128]; 
+  char fakeData[256]; 
   float temperature = random(25,77);  //fake number range, adjust as you like  
   float humidity =    random(77,99);  //You can use decimal instead of floats to save mem space
   
   sprintf(fakeData,  "{\"uptime\":%lu,\"temp\":%f,\"humid\":%f}", millis() / 1000, temperature, humidity); // JSON Object with escapes
                                                                                                            //Use %d instead of %f to save memory space
-  char postStr[40];
+  char postStr[64];
   sprintf(postStr, "POST %s HTTP/1.1", uri);  // put together the string for HTTP POST
   
   Serial.println("request is sending");
