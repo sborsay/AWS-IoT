@@ -1,7 +1,7 @@
  ----------------------------
  ```diff
 + For ESP8266 users
--  # Compile this only if using ESP8266 Board Package version under 3.0 
+- Compile this only if using ESP8266 Board Package version under 3.0 
 ```
   
  ## BEARSSL certificate handling changed after Board Package 3 on the ESP8266
