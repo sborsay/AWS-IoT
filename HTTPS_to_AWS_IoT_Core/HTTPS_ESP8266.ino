@@ -12,7 +12,7 @@
  
  ### Compile this only if using ESP8266 board manager version below 3.0, not backwards comparable
  
- ## Tools--> Board--> Board Manager-->ESP8266 version under 3.0 by ESP8266 Community
+ ## Tools--> Board--> Board Manager-->ESP8266 BELOW version 3.0 by ESP8266 Community
  
  ### Older ESP8266 sketch is not forward compatible
  
