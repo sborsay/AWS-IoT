@@ -72,8 +72,8 @@ Cmr5ttndjNAEfVOUKPN+8wXx4o8Fbd9dkhwggvBaMQhQjaSzzMJs
 -----END RSA PRIVATE KEY-----
 )KEY";
 
-/* root CA can be downloaded in:
-  https://www.symantec.com/content/en/us/enterprise/verisign/roots/VeriSign-Class%203-Public-Primary-Certification-Authority-G5.pem
+/* root CA found at:
+  https://www.amazontrust.com/repository/AmazonRootCA1.pem
   fungible between regions, I dont care if you use mine below or paste in your own.
 */
 static const char rootCA[] PROGMEM = R"EOF(
