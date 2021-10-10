@@ -18,8 +18,8 @@
 #include <WiFiClientSecure.h>
 
 
-const char* ssid = "yyyyyyyyy"; //your network
-const char* password = "xxxxxxxxxxxxxx";  //your wifi password
+const char* ssid = "WiFi Network name"; //your network
+const char* password = "WiFi Network Password";  //your wifi password
 
 const char* host = "aiknowkungfues-ats.iot.us-east-1.amazonaws.com"; //AWS IoT Core--> Settings (Device data endpoint)
 const int Port = 8443;  //typical values are HTTPS= 443, MQTT=8883, and HTTP = 80 but AWS IoT Core uses 84443 for HTTP(s) Certificate secured
@@ -83,8 +83,8 @@ WvMotZjt5nJJXZiMo0y4h3unOvqTNQD/Yp2OdGPwhEp0J7XSxOM=
 -----END RSA PRIVATE KEY-----
 )KEY";
 
-/* root CA can be downloaded in:
-  myClient://www.symantec.com/content/en/us/enterprise/verisign/roots/VeriSign-Class%203-Public-Primary-Certification-Authority-G5.pem
+/* root CA 
+   https://www.amazontrust.com/repository/AmazonRootCA1.pem
   fungible between regions, I dont care if you use mine below or paste in your own.
 */
 static const char rootCA[] PROGMEM = R"EOF(
