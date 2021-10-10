@@ -1,3 +1,5 @@
+//Moe info found by searching AWS IoT Development Guide for: "https://IoT_data_endpoint/topics/url_encoded_topic_name?qos=1""
+
 HTTPs with certs to IoT Core (MQTT test client: Subscribe)
 
 The CA certificate file (Amazon-root-CA-1.pem in this example).
@@ -36,10 +38,9 @@ Solution:  use the -k flag
 curl --tlsv1.2 -k --cacert Amazon-root-CA-1.pem --cert client.pem.crt --key private.pem.key --request POST --data "{\"Temperature\": 77, \"Humidity\": 88, \"Time\": 12349876,\"Device_ID\": \"device_4\"}" "https://a32qxxxkugfxxx-ats.iot.us-east-1.amazonaws.com:8443/topics/outTopic?qos=1"
 
 3.  curl: (58)  unable to set private key file: 'private.pem.key' type PEM
+Solution:  Rename private.pem.key --> my.private.key
 
-Solution:  Reformat private.pem.key --> test.private.key
-
-curl --tlsv1.2 -k --cacert Amazon-root-CA-1.pem --cert client.pem.crt --key test.private.key --request POST --data "{\"Temperature\": 77, \"Humidity\": 88, \"Time\": 12349876,\"Device_ID\": \"device_4\"}" "https://a32qxxxkugfxxx-ats.iot.us-east-1.amazonaws.com:8443/topics/outTopic?qos=1"
+curl --tlsv1.2 -k --cacert Amazon-root-CA-1.pem --cert client.pem.crt --key my.private.key --request POST --data "{\"Temperature\": 77, \"Humidity\": 88, \"Time\": 12349876,\"Device_ID\": \"device_4\"}" "https://a32qxxxkugfxxx-ats.iot.us-east-1.amazonaws.com:8443/topics/outTopic?qos=1"
 
 //Free online  tool to help add backslashs to normal JSON (Escaping): https://onlinejsontools.com/escape-json
 //more info at https://docs.aws.amazon.com/iot/latest/developerguide/http.html
