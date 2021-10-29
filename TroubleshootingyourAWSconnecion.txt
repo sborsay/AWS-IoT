@@ -35,5 +35,7 @@ A fatal error occurred: Failed to connect to ESP32: Timed out waiting for packet
 
 Solution:
 while connecting holding down the Boot/EN button for one second initiates the firmware download mode
-BOOT = FLASH: if you hold it down and press the EN/RST, your ESP32 will restart in flashing/uploading mode
-Do not press the RESET Button
+BOOT = FLASH
+
+Warning: 
+Do not press the Enable(EN)/RESET(RST) Button
