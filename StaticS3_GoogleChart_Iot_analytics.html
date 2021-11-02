@@ -19,7 +19,7 @@ $.get( "https://YOUR_DATA_LOCATION_IN_S3_HERE", function( data ) {
 		var timestamps = data.match( /(?<=^"\d\d","\d\d",")[0-9.]+/gm )
 		
 		//use a string literal to output our values before graphing
-		alert(`Values in our temerature array to grap ${temperature}`);
+		alert(`Values in our temperature array to graph ${temperature}`);
 		alert(`Valuesin our humidity array to graph ${humidity}`);
 		alert(`Values in our timestamp array to graph ${timestamps}`);
     
