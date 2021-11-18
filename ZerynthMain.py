@@ -37,7 +37,7 @@ wifi_driver.auto_init()
 
 print('connecting to wifi...')
 # place here your wifi configuration
-wifi.link("JoeyCat",wifi.WIFI_WPA2,"joeylovesfood")
+wifi.link("YOUR-WIFI-NETWORK-NAME-HERE",wifi.WIFI_WPA2,"YOUR-WIFI-PASSWORD")
 
 pkey, clicert = helpers.load_key_cert('private.pem.key', 'certificate.pem.crt')
 thing_conf = helpers.load_thing_conf()
