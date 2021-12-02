@@ -29,16 +29,22 @@ aws --region us-west-2 iot-data publish --topic "myTopic" --output json --payloa
 }
 
 
-//test JSON sample.json (copy and save as a .json file from your working directory)
+//test JSON sample.json (copy and save as sample-json-file.json file from your working directory)
 
 [
 			{ "id": "5001", "type": "None" },
 			{ "id": "5002", "type": "Glazed" },
 			{ "id": "5005", "type": "Sugar" },
 			{ "id": "5007", "type": "Powdered Sugar" },
-			{ "id": "5006", "type": "Chocolate with Sprinkles" },
+			{ "id": "5006", "type": "Choco with Suger" },
 			{ "id": "5003", "type": "Chocolate" },
 			{ "id": "5004", "type": "Maple" }
 ]
 		
+// converted to base64 save as base64.json  (https://codebeautify.org/json-to-base64-converter)
 
+WwoJCQl7ICJpZCI6ICI1MDAxIiwgInR5cGUiOiAiTm9uZSIgfSwKCQkJeyAiaWQiOiAiNTAwMiIsI
+CJ0eXBlIjogIkdsYXplZCIgfSwKCQkJeyAiaWQiOiAiNTAwNSIsICJ0eXBlIjogIlN1Z2FyIiB9LA
+oJCQl7ICJpZCI6ICI1MDA3IiwgInR5cGUiOiAiUG93ZGVyZWQgU3VnYXIiIH0sCgkJCXsgImlkIjo
+gIjUwMDYiLCAidHlwZSI6ICJDaG9jbyBjb24gYXp1Y2FyIiB9LAoJCQl7ICJpZCI6ICI1MDAzIiwg
+InR5cGUiOiAiQ2hvY29sYXRlIiB9LAoJCQl7ICJpZCI6ICI1MDA0IiwgInR5cGUiOiAiTWFwbGUiIH0KXQ==
