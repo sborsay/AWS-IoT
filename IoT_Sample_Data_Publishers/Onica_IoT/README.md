@@ -6,7 +6,7 @@ Requires NPM to be installed on your computer:  https://docs.npmjs.com/downloadi
 
 A really simple IoT "thing" for connecting to AWS IoT.
 
-1.  Get an IoT certificate & Private key from AWS IoT Core and place them root directory, named cert.pem and private.pem.<br/>
+1.  Get an IoT certificate & Private key from AWS IoT Core and place them root directory, named cert.pem.crt and private.pem.key.<br/>
 CA certificate (x.509 root) is provided for you as it is fungible.<br/>
 All files should be in the same folder on the same level.<br/>
 
