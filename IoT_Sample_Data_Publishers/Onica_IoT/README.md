@@ -3,9 +3,10 @@ Updated and simplified by Stephen Borsay for test use.
 changes from Original
 ______________________
 <sup>
-A) Full file names of Private and Client added, original truncated file extentions throw an error
-B) Random function fixed and simplified.  Old version caused 'sticky' numbers
-C) Removed package-lock.json as files is regenerated  with 'npm init' so redundent
+<br/>
+A) Full file names of Private and Client added, original truncated file extentions throw an error<br/>
+B) Random function fixed and simplified.  Old version caused 'sticky' numbers<br/>
+C) Removed package-lock.json as files is regenerated  with 'npm init' so redundent<br/>
 </sup>
 
 
