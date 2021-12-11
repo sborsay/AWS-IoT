@@ -6,14 +6,14 @@ Requires NPM to be installed on your computer:  https://docs.npmjs.com/downloadi
 
 A really simple IoT "thing" for connecting to AWS IoT.
 
-Get an IoT certificate & Private key from AWS IoT Core and place them root directory, named cert.pem and private.pem.<br/>
+1.  Get an IoT certificate & Private key from AWS IoT Core and place them root directory, named cert.pem and private.pem.<br/>
 CA certificate (x.509 root) is provided for you as it is fungible.<br/>
 All files should be in the same folder on the same level.<br/>
 
 
-Run '***npm install***' to download dependencies<br/>
+2.  Run '***npm install***' to download dependencies<br/>
 
-Run this simulator with:  **npm start HOST STAGE CLIENTID**<br/>
+3.  Run this simulator with:  **npm start HOST STAGE CLIENTID**<br/>
 
 Where HOST is the MQTT endpoint for an AWS account, STAGE is the name of an environment (dev, prod, etc), and CLIENTID is a unique identifier for this "thing".
 (example: **npm start a32qaa131oyees-ats.iot.us-east-1.amazonaws.com aaa bbb**
