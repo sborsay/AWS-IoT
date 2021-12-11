@@ -1,13 +1,6 @@
-This publisher is taken from: https://github.com/onicagroup/sample-iot-thing
-Updated and simplified by Stephen Borsay for test use.
-changes from Original
-______________________
-<sup>
-<br/>
-A) Full file names of Private and Client added, original truncated file extentions throw an error<br/>
-B) Random function fixed and simplified.  Old version caused 'sticky' numbers<br/>
-C) Removed package-lock.json as files is regenerated  with 'npm init' so redundent<br/>
-</sup>
+This publisher is taken from: https://github.com/onicagroup/sample-iot-thing <br/>
+Updated and simplified by Stephen Borsay for test use.<br/>
+
 
 
 A Really simple IoT "thing" for connecting to AWS IoT.
@@ -24,3 +17,15 @@ Where HOST is the MQTT endpoint for an AWS account, STAGE is the name of an envi
 
 See messages published to the IoT topic iotsample/STAGE/CLIENTID/data in the AWS IoT Core Console.
 Need help with your IoT project? Check out IoTanium @ http://www.onica.com/iotanium
+
+
+----------------------
+changes from Original
+______________________
+<sup>
+<br/>
+A) Full file names of Private and Client added, original truncated file extentions throw an error<br/>
+B) Random function fixed and simplified.  Old version caused 'sticky' numbers<br/>
+C) Removed package-lock.json as files is regenerated  with 'npm init' so redundent<br/>
+</sup>
+
