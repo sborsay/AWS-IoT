@@ -1,0 +1,14 @@
+{
+  "name": "iotsample-thing",
+  "version": "0.1.0",
+  "description": "IoT Workspace Sample Thing",
+  "dependencies": {
+    "aws-iot-device-sdk": "^2.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node thing.js"
+  },
+  "author": "Onica",
+  "private": true
+}
