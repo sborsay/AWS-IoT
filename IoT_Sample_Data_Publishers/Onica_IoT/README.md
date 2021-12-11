@@ -25,8 +25,8 @@ See messages published to the IoT topic **iotsample/STAGE/CLIENTID/data** in the
 Need help with your IoT project? Check out IoTanium @ http://www.onica.com/iotanium <br/>
 
 ----------------------
-changes from Original
-______________________
+changes from original thing.js
+
 <sup>
 <br/>
 A) Full file names of Private and Client added, original truncated file extentions throw an error<br/>
