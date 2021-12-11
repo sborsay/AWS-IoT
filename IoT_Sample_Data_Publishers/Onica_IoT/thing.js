@@ -11,8 +11,8 @@ function start(profile) {
   console.log(`Host: ${host} | ClientId: ${clientId} | Topic: ${topic}`)
 
   const device = awsIot.device({
-    host: host,
-    keyPath: 'private.pem.key',
+    host: host,                  //Host is your AWS endpoint, generate your certs in same region as your intended endpoint region. 
+    keyPath: 'private.pem.key',  //Make sure the entire file extentions here match yours 
     certPath: 'cert.pem.crt',
     caPath: 'ca.pem',
     clientId: clientId,
@@ -41,9 +41,9 @@ function start(profile) {
 
 
     setInterval(function() {
-	 
-	  let temperature = Math.floor(Math.random() * (110)); //obviously Fehreinheit
-      let humidity = Math.floor(Math.random() * (100));    //the humidity index can never go below zero or exceed 100
+	                                                    //Use math.floor() unless you want to deal with decimal percision
+      let temperature = Math.floor(Math.random() * (110));  //Obviously Fahrenheit
+      let humidity = Math.floor(Math.random() * (100));     //The humidity index can never go below zero or exceed 100
 
       device.publish(topic, JSON.stringify({
         thingId: clientId,
