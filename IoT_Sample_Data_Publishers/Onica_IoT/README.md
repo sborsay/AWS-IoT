@@ -5,7 +5,7 @@ Updated and simplified by Stephen Borsay for test use.<br/>
 
 A Really simple IoT "thing" for connecting to AWS IoT.
 
-Get an IoT certificate & key from AWS IoT Core and place them root directory, named cert.pem and private.pem.
+Get an IoT certificate & key from AWS IoT Core and place them root directory, named cert.pem and private.pem.<br/>
 CA certificate (x.509 root) is provided as it is fungible
 all files should be in the same folder on the same level
 
