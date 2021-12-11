@@ -1,5 +1,5 @@
 This publisher is taken from: https://github.com/onicagroup/sample-iot-thing <br/>
-Updated and simplified by Stephen Borsay for test use.<br/>
+Updated, modified, and simplified by Stephen Borsay for test use.<br/>
 Requires NPM to be installed on your computer:  https://docs.npmjs.com/downloading-and-installing-node-js-and-npm <br/>
 
 
