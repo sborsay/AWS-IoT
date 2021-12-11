@@ -9,6 +9,14 @@ A really simple IoT "thing" for connecting to AWS IoT.
 Get an IoT certificate & key from AWS IoT Core and place them root directory, named cert.pem and private.pem.<br/>
 CA certificate (x.509 root) is provided for you as it is fungible.<br/>
 All files should be in the same folder on the same level.<br/>
+LICENSE
+README.md
+ca.pem
+cert.pem
+private.pem
+package.json
+thing.js
+<br/>
 
 Run '***npm install***' to download dependencies<br/>
 
