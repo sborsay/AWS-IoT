@@ -14,9 +14,7 @@ import time
 
 deviceNames = ['SBS01', 'SBS02', 'SBS03', 'SBS04', 'SBS05']
 
-iot = boto3.client('iot-data');  #iot = boto3.client('iot-data');  #'a3vvvvvvvees.iot.us-east-2.amazonaws.com'
-#    myAWSIoTMQTTClient.configureEndpoint(host, port)
-#iot.configureEndpoint('a32qvvvvvvyees-ats.iot.eu-west-1.amazonaws.com', 8883)
+iot = boto3.client('iot-data');  
 
 
 # generate Flow values
@@ -63,8 +61,7 @@ while True:
         data = json.dumps(getFlowValues())
         print(data)
         response = iot.publish(
-             topic='xxx',     #var AWS = require('aws-sdk');
-                                               #var iotdata = new AWS.IotData({endpoint: 'a32-2.amas.com' }); #return iotdata.publish(params,
+             topic='xxx',     
              payload=data
         ) 
     elif (0.20<= rnd < 0.55):
