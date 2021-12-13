@@ -1,4 +1,4 @@
-//Moe info found by searching AWS IoT Development Guide for: "https://IoT_data_endpoint/topics/url_encoded_topic_name?qos=1""
+//More info found by searching AWS IoT Development Guide for: "HTTPS message URL"
 
 HTTPs with certs to IoT Core (MQTT test client: Subscribe)
 
@@ -16,8 +16,8 @@ curl --tlsv1.2 \
     "https://IoT_data_endpoint:8443/topics/topic?qos=1"
 
 //check your current AWS IoT Core Region
-//change the nme of your certicifates to: 
 
+//change the name of your from specific to generic:
 a04r7f8e71-certificate.pem  --> client.pem
 a04r7f8ee71-private.pem.key --> private.pem.key
 
