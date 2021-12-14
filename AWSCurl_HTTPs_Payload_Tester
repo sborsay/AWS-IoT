@@ -1,4 +1,4 @@
-//More info found by searching AWS IoT Development Guide for: "HTTPS message URL"
+//More info found at https://docs.aws.amazon.com/iot/latest/developerguide/http.html
 
 HTTPs with certs to IoT Core (MQTT test client: Subscribe)
 
