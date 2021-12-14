@@ -1,6 +1,6 @@
 #  code found at: https://aws.amazon.com/blogs/iot/integrating-iot-data-with-your-data-lake-with-new-aws-iot-analytics-features/
 #  changed 1000 iterations to 10
-
+# to change to temperature, humidity, and timestamp simply comment out the uneeded variables in the script and CLI command
 
 #!/bin/bash
 
