@@ -14,7 +14,7 @@ curl --tlsv1.2 ^
     --cert client.pem.crt ^
     --key private.pem.key ^
     --request POST ^
-    --data "{ \"message\": \"Hello, world\" }" ^
+    --data "{\"Temperature\": 77, \"Humidity\": 88, \"Time\": 12349876,\"Device_ID\": \"device_4\"}" ^
     "https://<INSERT-YOUR-IOT-DATA-ENDPOINT-HERE>:8443/topics/outTopic?qos=1"
 
 //this is for Linux, , certificates in same directory as where you dispatch cURL commands
@@ -23,7 +23,7 @@ curl --tlsv1.2 \
     --cert client.pem.crt \
     --key private.pem.key \
     --request POST \
-    --data "{ \"message\": \"Hello, world\" }" \
+    --data "{\"Temperature\": 77, \"Humidity\": 88, \"Time\": 12349876,\"Device_ID\": \"device_4\"}" \
     "https://<INSERT-YOUR-IOT-DATA-ENDPOINT-HERE>:8443/topics/topic?qos=1"
 
 //check your current AWS IoT Core Region
