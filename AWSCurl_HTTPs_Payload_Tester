@@ -10,7 +10,7 @@ Create the curl command line, replacing the <INSERT> values for those of your ac
 //check that your current AWS IoT Core Region in console matches certificate creation region
 
 //change the name of your from specific to generic:
-a04r7f8e71-certificate.pem  --> client.pem
+a04r7f8e71-certificate.pem.crt  --> client.pem.crt
 a04r7f8ee71-private.pem.key --> private.pem.key
 
 //insert your own AWS IoT endpoint:  aws iot describe-endpoint
