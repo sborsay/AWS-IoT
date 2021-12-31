@@ -16,6 +16,8 @@ a04r7f8ee71-private.pem.key --> private.pem.key
 //insert your own AWS IoT endpoint:  aws iot describe-endpoint
 //insert your topic name (here I called the topic: "outTopic")
 
+in windows > where curl.exe
+
 //try this first from the prompt in same directory as your Linux based curl.exe in windows, with certificates in the sam directory
 
 curl --tlsv1.2 --cacert Amazon-root-CA-1.pem --cert client.pem.crt --key private.pem.key --request POST --data "{\"Temperature\": 77, \"Humidity\": 88, \"Time\": 12349876,\"Device_ID\": \"device_4\"}" "https://<INSERT-YOUR-IOT-DATA-ENDPOINT-HERE>:8443/topics/outTopic?qos=1"
