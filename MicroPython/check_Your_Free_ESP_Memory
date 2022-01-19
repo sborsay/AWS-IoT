@@ -1,0 +1,8 @@
+>>>import uos
+>>> uos.statvfs('/')
+(4096, 4096, 348, 329, 329, 0, 0, 0, 0, 255)
+
+so,
+4096 * 348 is total space in bytes
+4096 * 329 is free space in bytes
+used space = total - free
