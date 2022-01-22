@@ -55,7 +55,7 @@ def pub_msg(msg):  #publish is synchronous so we poll and publish
 
 def sub_cb(topic, msg):
     print('Device received a Message: ')
-    print((topic, msg))  #print incoing message asychronously
+    print((topic, msg))  #print incoing message, waits for loop below
     pin.value(0) #blink if incoming message by toggle off
 
 def connect_mqtt():    
@@ -92,16 +92,14 @@ try:
     print("cc")
     while True: #loop forever
             pin.value(1)
-            #new_message =  MQTT_CLIENT.check_msg()
             new_message = MQTT_CLIENT.check_msg()  # check for new subsciption payload incoming
             if new_message != 'None':  #check if we have a message and continue to publish, if so then get the message
-        #if new_message != 'None':     #without using this check we can easily miss incoming messages
                 rando1 = random.randint(0, 100)
                 rando2 = random.randint(0, 100)
                 deviceTime = time.time()
                 print("Publishing")
                 pub_msg("{\n  \"temperature\": %d,\n  \"humidity\": %d,\n  \"timestamps\": %d\n}"%(rando1,rando2,deviceTime))
-                print("OK")
+                print("published payload")
                 time.sleep(5)  # 5 second delay between publishing, adjust as you like
             
 except Exception as e:
