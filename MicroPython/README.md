@@ -7,4 +7,4 @@
 4.   Thonny --> tools-->options-->Interpreter  Set ESP device and port
 5.   Paste in Code and change indicated fields to personalize your device
 6.   Program and connect to AWS IoT Core
-7.   Congrats, now PayPa me
+7.   Congrats, now PayPa me or at least star my repo
