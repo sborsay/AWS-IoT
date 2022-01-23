@@ -2,6 +2,12 @@
 #openssl x509 -in 5d93250f80-certificate.pem.crt -out  ClientCert.cert.der -outform DER
 #openssl rsa -in 5d93250f80-private.pem.key -out  privateKey.key.der -outform DER
 
+#AWS MQTT client cert example for esp8266, this sketch is a combination of various sources:
+#https://awsiot.wordpress.com/2019/01/10/connect-8266-to-aws-mqtt-using-miropython/
+#https://randomnerdtutorials.com/micropython-mqtt-esp32-esp8266/
+#https://forum.micropython.org/viewtopic.php?t=5166
+#original code added by Stephen Borsay for Udemy Course
+
 
 #AWS MQTT Connect Pub/Sub
 from umqtt.robust import MQTTClient
