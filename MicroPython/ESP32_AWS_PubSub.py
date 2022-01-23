@@ -1,9 +1,8 @@
-#AWS MQTT client cert example for esp8266 or esp32 running MicroPython 1.9 
-#this sketch is a combination of various sources:
+#AWS MQTT client example for esp32, this sketch is a combination of various sources:
 #https://awsiot.wordpress.com/2019/01/10/connect-8266-to-aws-mqtt-using-miropython/
 #https://randomnerdtutorials.com/micropython-mqtt-esp32-esp8266/
 #https://forum.micropython.org/viewtopic.php?t=5166
-#original code added from Stephen Borsay for Udemy Course
+#original code added by Stephen Borsay for Udemy Course
 
 from umqtt.robust import MQTTClient
 import time
@@ -12,11 +11,12 @@ import machine
 pin = machine.Pin(2)  #blinking is optional, check your LED pin
 
 #Place these Certs at same folder level as your MicroPython program
+#no need to alter your AWS Client Cert and Private Key
 CERT_FILE = "/<Your_Client-Cert_here>.pem"
 KEY_FILE = "/<Your-Private-Key-Here>.pem.key"
 
 #if you change the ClientId make sure update AWS policy
-MQTT_CLIENT_ID = "aUniqueclientId8"
+MQTT_CLIENT_ID = "CurtesyFlush08"
 MQTT_PORT = 8883 #MQTT secured
 #if you change the topic make sure update AWS policy
 PUB_TOPIC = "outTopic" #coming out of device
@@ -94,11 +94,11 @@ try:
             pin.value(1)
             new_message = MQTT_CLIENT.check_msg()  # check for new subsciption payload incoming
             if new_message != 'None':  #check if we have a message and continue to publish, if so then get the message
-                rando1 = random.randint(0, 100)
-                rando2 = random.randint(0, 100)
+                temp =  random.randint(0, 130)
+                humid = random.randint(0, 100)
                 deviceTime = time.time()
                 print("Publishing")
-                pub_msg("{\n  \"temperature\": %d,\n  \"humidity\": %d,\n  \"timestamps\": %d\n}"%(rando1,rando2,deviceTime))
+                pub_msg("{\n  \"temperature\": %d,\n  \"humidity\": %d,\n  \"timestamps\": %d\n}"%(temp,humid,deviceTime))
                 print("published payload")
                 time.sleep(5)  # 5 second delay between publishing, adjust as you like
             
