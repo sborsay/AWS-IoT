@@ -1,3 +1,4 @@
+#For Windows install 'Git for Windows' then openSSL can be found in-->  C:\Program Files\Git\usr\bin>
 #openssl x509 -in 5d93250f80-certificate.pem.crt -out  ClientCert.cert.der -outform DER
 #openssl rsa -in 5d93250f80-private.pem.key -out  privateKey.key.der -outform DER
 
@@ -14,7 +15,7 @@ CERT_FILE = "/<Your-DER-Converted-Client-Cert>"
 KEY_FILE = "/<Your-DER-Converted-Private-Key>"
 
 #if you change the ClientId make sure update AWS policy
-MQTT_CLIENT_ID = "badfhs638"
+MQTT_CLIENT_ID = "HeavyPetter33"
 MQTT_PORT = 8883 #MQTT Secured
 
 #if you change the topic make sure update AWS policy
