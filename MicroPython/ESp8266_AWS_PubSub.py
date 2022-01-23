@@ -19,9 +19,9 @@ MQTT_PORT = 8883   #MQTT secured port, don't 1883 me
 MQTT_TOPIC = "outTopic" #maybe outTopic or iot/something
 
 #Change the following three settings to match your environment
-MQTT_HOST = "a32qaa131oyees-ats.iot.us-west-2.amazonaws.com"
-WIFI_SSID = "iPhone"
-WIFI_PW = "burger888" #ex: password123
+MQTT_HOST = "iknowkungfuyes-ats.iot.us-west-2.amazonaws.com"
+WIFI_SSID = "ssid"
+WIFI_PW = "pw"" #ex: password123
 
 mqtt_client = None
 
