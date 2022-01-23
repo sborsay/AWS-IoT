@@ -3,29 +3,29 @@
 #openssl rsa -in 5d93250f80-private.pem.key -out  privateKey.key.der -outform DER
 
 
-#AWS MQTT client cert example for esp8266 or esp32 running MicroPython 1.9 
+#AWS MQTT Connect Pub/Sub
 from umqtt.robust import MQTTClient
 import time
 import random
 import machine
 pin = machine.Pin(2)
 
-#This works for either ESP8266 ESP32 if you rename certs before moving into /flash 
-CERT_FILE = "/<Your-DER-Converted-Client-Cert>"
-KEY_FILE = "/<Your-DER-Converted-Private-Key>"
+#Convert your AWS Certs with directions above
+CERT_FILE = "/myCert.cert.der"
+KEY_FILE = "/myKey.key.der"
 
-#if you change the ClientId make sure update AWS policy
+#ClientId should be unique per device
 MQTT_CLIENT_ID = "HeavyPetter33"
 MQTT_PORT = 8883 #MQTT Secured
 
-#if you change the topic make sure update AWS policy
+#Pub and Sub topics 
 PUB_TOPIC = "outTopic" #coming out of device
 SUB_TOPIC = "inTopic"  #coming into device
 
 #Change the following three settings to match your environment
-MQTT_HOST = "IKnowKungFuees-ats.iot.us-west-2.amazonaws.com"  #Your AWS IoT Endpoint IoT Core-->Settings
+MQTT_HOST = "IKnowKungFuees-ats.iot.us-east-1.amazonaws.com"  #Your AWS IoT Endpoint IoT Core-->Settings
 WIFI_SSID = "<Your-WiFi-Network>"
-WIFI_PW = "<Your-WiFi-Password"
+WIFI_PW = "<Your-WiFi-Password>"
 
 MQTT_CLIENT = None  #empty obecjt
 
@@ -41,7 +41,7 @@ def do_connect():
         sta_if.active(True)
         sta_if.connect(WIFI_SSID , WIFI_PW)
         while not sta_if.isconnected():
-            pass
+            pass  # I do nothing and like it
     print('network config:', sta_if.ifconfig())
     
 
