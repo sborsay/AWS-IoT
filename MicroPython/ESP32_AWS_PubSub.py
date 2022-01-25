@@ -29,7 +29,7 @@ WIFI_PW = "<Your-WiFi-Password>"
 
 MQTT_CLIENT = None
 
-print(starting program")
+print("starting program")
 
 def do_connect():
     print("starting connection method")
