@@ -17,8 +17,8 @@ import machine
 pin = machine.Pin(2)
 
 #Convert your AWS Certs with directions above
-CERT_FILE = "/myCert.cert.der"
-KEY_FILE = "/myKey.key.der"
+CERT_FILE = "/<Your-Client-Cert>.der"
+KEY_FILE = "/<Your-Private-Key>.key.der"
 
 #ClientId should be unique per device
 MQTT_CLIENT_ID = "HeavyPetter33"
