@@ -12,7 +12,7 @@ pin = machine.Pin(2)  #blinking is optional, check your LED pin
 
 #Place these Certs at same folder level as your MicroPython program
 #no need to alter your AWS Client Cert and Private Key
-CERT_FILE = "/<Your_Client-Cert_here>.pem"  #if you get a "[Errno 2] ENOENT" error, then use: "Client-Cert.pem.crt"
+CERT_FILE = "/<Your_Client-Cert_here>.pem.crt"  #the ".crt" may be hidden in your file system but it is saved from AWS with this extention
 KEY_FILE = "/<Your-Private-Key-Here>.pem.key"
 
 #if you change the ClientId make sure update AWS policy
