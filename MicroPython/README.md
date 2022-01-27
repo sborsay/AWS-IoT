@@ -3,8 +3,8 @@
 1.   Download and Install Thonny:
      https://thonny.org
   
-4.   Erase your ESP's memory and upload MicroPython Environment to your device:
-5.   
+2.   Erase your ESP's memory and upload MicroPython Environment to your device:
+
 ```
  pip install esptool
  ```
@@ -17,9 +17,16 @@ ESP8266: https://micropython.org/download/esp8266/
 
 Erase your ESP Chip:
 
-ESP32:    > python -m esptool –-chip esp32 erase_flash
+ESP32:    
+```
+python -m esptool –-chip esp32 erase_flash
+```
 or
-ESP8266:  > python -m esptool --chip esp8266 erase_flash
+
+ESP8266:  
+```
+python -m esptool --chip esp8266 erase_flash
+```
 
 Upload the ESP MicroPython Firmware:
 
