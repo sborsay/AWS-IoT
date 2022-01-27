@@ -4,8 +4,10 @@
      https://thonny.org
   
 4.   Erase your ESP's memory and upload MicroPython Environment to your device:
-
-> pip install esptool
+5.   
+```
+ pip install esptool
+ ```
 
 Download latest Binary:
 
