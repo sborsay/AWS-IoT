@@ -23,7 +23,7 @@ python -m esptool –-chip esp32 erase_flash
 ```
 or
 
-ESP8266:  
+ESP8266: 
 ```
 python -m esptool --chip esp8266 erase_flash
 ```
@@ -36,8 +36,10 @@ ESP32:
 > python -m esptool --chip esp32 --port COM4 write_flash -z 0x1000 esp32-2019-Latest-g5064dfxxx.bin
 ```
 or
+
+ESP8266: 
 ```
-ESP8266: > python -m esptool --chip esp8266 --port COM4 write_flash --flash_mode dio --flash_size detect 0x0 esp8266-Latest-vx.x.x.bin
+python -m esptool --chip esp8266 --port COM4 write_flash --flash_mode dio --flash_size detect 0x0 esp8266-Latest-vx.x.x.bin
 ```
 
 * Replace COM4 with whatever Com port your device is connected to
