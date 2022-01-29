@@ -12,9 +12,11 @@
 Download latest Binary:
 
 ESP32: 
+
 > https://micropython.org/download/esp32/
 or
 ESP8266:
+
 > https://micropython.org/download/esp8266/
 
 Erase your ESP Chip:
