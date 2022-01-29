@@ -49,7 +49,7 @@ python -m esptool --chip esp8266 --port COM4 write_flash --flash_mode dio --flas
 * Replace COM4 with whatever Com port your device is connected to
 
 
- > Thonny --> tools-->options-->Interpreter -> Set ESP device type and serial port
+ > _Thonny --> tools-->options-->Interpreter -> Set ESP device type and serial port
 
  Paste in Code and change indicated fields to personalize your device
  
