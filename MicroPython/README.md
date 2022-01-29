@@ -3,7 +3,7 @@
 1.   Download and Install Thonny:
      https://thonny.org
   
-2.   Erase your ESP's memory and upload MicroPython Environment to your device:
+2.  Install the ESP tool
 
 ```
  pip install esptool
@@ -19,7 +19,7 @@ ESP8266:
 
 > https://micropython.org/download/esp8266/
 
-Erase your ESP Chip:
+Erase your ESP chips flash memory with the esptool.:
 
 ESP32:    
 ```
