@@ -3,7 +3,7 @@ Download and install Git for Windows:
 
 > https://gitforwindows.org/
 
-Use Admistrator privildges from your command box
+Use Admistrator privildges from your command prompt
 
 
 ![admincmd](https://user-images.githubusercontent.com/16296900/151677422-468e5d7f-8455-4afc-bbdb-ec607580ce14.JPG)
