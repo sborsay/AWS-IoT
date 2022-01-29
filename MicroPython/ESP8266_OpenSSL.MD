@@ -14,9 +14,12 @@ Use Admistrator privildges from your command prompt
 
 
 Example:
-
-> openssl x509 -in 5d65748f80-certificate.pem.crt -out  ClientCert.cert.der -outform DER
-> openssl rsa -in 5d65748f80-private.pem.key -out  privateKey.key.der -outform DER
+```
+ openssl x509 -in 5d65748f80-certificate.pem.crt -out  ClientCert.cert.der -outform DER
+```
+```
+ openssl rsa -in 5d65748f80-private.pem.key -out  privateKey.key.der -outform DER
+```
 
 ![image](https://user-images.githubusercontent.com/16296900/151677416-a58bd7ea-27a0-4e8a-9c32-983dd569eb9b.png)
 
