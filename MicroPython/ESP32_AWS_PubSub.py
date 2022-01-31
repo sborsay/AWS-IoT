@@ -15,7 +15,7 @@ pin = machine.Pin(2)  #blinking is optional, check your LED pin
 CERT_FILE = "/<Your_Client-Cert_here>.pem.crt"  #the ".crt" may be hidden in your file system but it is saved from AWS with this extention
 KEY_FILE = "/<Your-Private-Key-Here>.pem.key"
 
-#if you change the ClientId make sure update AWS policy
+#If you change the ClientId make sure update AWS policy
 MQTT_CLIENT_ID = "CurtesyFlush08"
 MQTT_PORT = 8883 #MQTT secured
 #if you change the topic make sure update AWS policy
@@ -43,7 +43,6 @@ def do_connect():
             pass
     print('network config:', sta_if.ifconfig())
     
-
 def pub_msg(msg):  #publish is synchronous so we poll and publish
     global MQTT_CLIENT
     try:    
@@ -73,7 +72,6 @@ def connect_mqtt():
         MQTT_CLIENT = MQTTClient(client_id=MQTT_CLIENT_ID, server=MQTT_HOST, port=MQTT_PORT, keepalive=5000, ssl=True, ssl_params={"cert":cert, "key":key, "server_side":False})
         MQTT_CLIENT.connect()
         print('MQTT Connected')
-        #sub_msg() #set up subscription and wait for incoming messages, subsciption is set up below
         MQTT_CLIENT.set_callback(sub_cb)
         MQTT_CLIENT.subscribe(SUB_TOPIC)
         print('Subscribed to %s as the incoming topic' % (SUB_TOPIC))
@@ -86,10 +84,8 @@ def connect_mqtt():
 try:
     print("Connecting WIFI")
     do_connect()
-    #connect_wifi(WIFI_SSID, WIFI_PW)
     print("Connecting MQTT")
     connect_mqtt()
-    print("cc")
     while True: #loop forever
             pin.value(1)
             new_message = MQTT_CLIENT.check_msg()  # check for new subsciption payload incoming
