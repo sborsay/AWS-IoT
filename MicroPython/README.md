@@ -37,7 +37,7 @@ Upload the ESP MicroPython Firmware:
 
 ESP32:
 ```
-> python -m esptool --chip esp32 --port COM4 write_flash -z 0x1000 esp32-2019-Latest-g5064dfxxx.bin
+python -m esptool --chip esp32 --port COM4 write_flash -z 0x1000 esp32-2019-Latest-g5064dfxxx.bin
 ```
 or
 
