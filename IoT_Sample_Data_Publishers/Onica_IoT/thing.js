@@ -11,7 +11,7 @@ function start(profile) {
   console.log(`Host: ${host} | ClientId: ${clientId} | Topic: ${topic}`)
 
   const device = awsIot.device({
-    host: host,                  //Host is your AWS endpoint, generate your certs in same region as your intended endpoint region. 
+    host: host,                  //leave this as it is here: 'host', the endpoint is aquired through the command line 
     keyPath: 'private.pem.key',  //Make sure the entire file extentions here match yours 
     certPath: 'cert.pem.crt',
     caPath: 'ca.pem',
