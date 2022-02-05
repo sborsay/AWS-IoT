@@ -10,6 +10,7 @@ A really simple IoT "thing" for connecting to AWS IoT.
 CA certificate (x.509 root) is provided for you as it is fungible.<br/>
 All files should be in the same folder on the same level.<br/>
 
+* Also make sure _package.json_ from this repo is in your directory too
 
 2.  Run '***npm install***' to download dependencies<br/>
 
