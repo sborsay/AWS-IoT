@@ -3,7 +3,8 @@ const awsIot = require('aws-iot-device-sdk')
 const host = process.argv[2]
 const stage = process.argv[3]
 const clientId = process.argv[4]
-const topic = `iotsample/${stage}/${clientId}/data`
+const topic = `iotsample/${stage}/${clientId}/data` //for this topic you can subscribe to: 'iotsample/#'
+                                                    //in the AWS MQTT test client on IoT Core
 
 start()
 
