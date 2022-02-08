@@ -26,6 +26,9 @@ Troubleshooting ESP8266 and ESP32 connection issues.
     The device will connect but the payload wont pass through if your device certificates aren't exactly correct.
     If your device isn't even ahowing up in the Monitor then it is likely a hardware issue not a certificate issue.
     Confirm you are using the correct virtulization package or board manager for your device.
+    
+    7.  For the ESP8266 only:  Make sure you are using the right version of the sketch for your Arduino Board Manager.  If you are not receiving
+     input on AWS IoT Core it becuase you could be using the worng ESP8266 sketch for your current Arduino Board Manager package.
 
 ----------------------------------------------------------------------------
 Some older or cheaper ESP32 Boards:
