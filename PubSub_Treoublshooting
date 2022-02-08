@@ -1,3 +1,6 @@
+Firt, ensure youa re using the correct ESP8266 sketch depending on your Arduino Board Manager(above or below 3.0)
+The IDE requires different sketches for different versions of the Arduino Board manager for it to connect to AWS IoT Core.
+--------------------
 If your data payload coming to or from the device via MQTT PubSUB  isn't coming through, it may be your sprintf char buffer
 is too large (exceeds 128 chars), issue is discussed here:  https://github.com/knolleary/pubsubclient/issues/110
 
@@ -29,3 +32,5 @@ to-->
 #ifndef MQTT_MAX_PACKET_SIZE
 #define MQTT_MAX_PACKET_SIZE 512
 #endif
+
+
