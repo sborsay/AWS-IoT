@@ -16,8 +16,9 @@ import random
 import machine
 pin = machine.Pin(2)
 
-#Convert your AWS Certs with directions above
-CERT_FILE = "/<Your-Client-Cert>.der"
+#Convert your AWS Certs with OpenSSL:  directions in the header of this code
+#Open.SSL can be found with default install  in--> C:\Program Files\Git\usr\bin>
+CERT_FILE = "/<Your-Client-Cert>.cert.der"
 KEY_FILE = "/<Your-Private-Key>.key.der"
 
 #ClientId should be unique per device
