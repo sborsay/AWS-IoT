@@ -1,5 +1,7 @@
 //More info found at https://docs.aws.amazon.com/iot/latest/developerguide/http.html
 
+//aws iot describe-endpoint --endpoint-type iot:Data-ATS
+
 HTTPs with certs to IoT Core (MQTT test client: Subscribe)
 
 The CA certificate file (Amazon-root-CA-1.pem in this example).
