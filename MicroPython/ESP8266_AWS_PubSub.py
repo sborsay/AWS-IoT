@@ -41,7 +41,6 @@ print("Starting program...")
 def do_connect():
     print("In connect method")
     import network
-    print("hfhf")
     sta_if = network.WLAN(network.STA_IF)
     if not sta_if.isconnected():
         print('connecting to network...')
@@ -98,7 +97,7 @@ try:
     #connect_wifi(WIFI_SSID, WIFI_PW)
     print("Connecting MQTT")
     connect_mqtt()
-    print("cc")
+    print("Entering Loop")
     while True: #loop forever
             pin.value(1)
             new_message = MQTT_CLIENT.check_msg()  # check for new subsciption payload incoming
