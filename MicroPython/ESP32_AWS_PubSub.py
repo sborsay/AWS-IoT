@@ -17,7 +17,7 @@ KEY_FILE = "/<Your-Private-Key-Here>.pem.key"
 
 #Make a new ClientId for each device
 MQTT_CLIENT_ID = "CurtesyFlush08"
-MQTT_PORT = 8883 #MQTT secured
+MQTT_PORT = 8883 #MQTT secured, do not alter
 PUB_TOPIC = "outTopic" #coming out of device
 SUB_TOPIC = "inTopic"  #coming into device
 
