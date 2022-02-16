@@ -12,7 +12,7 @@ pin = machine.Pin(2)  #blinking is optional, check your LED pin
 
 #Place these Certs at same folder level as your MicroPython program
 #no need to alter your AWS Client Cert and Private Key
-CERT_FILE = "/<Your_Client-Cert_here>.pem.crt"  #the ".crt" may be hidden in your file system but it is saved from AWS with this extention
+CERT_FILE = "/<Your_Client-Cert_here>.pem.crt"  #the ".crt" may be hidden in your file system but it is saved from AWS with this extension
 KEY_FILE = "/<Your-Private-Key-Here>.pem.key"
 
 #If you change the ClientId make sure update AWS policy
@@ -23,7 +23,7 @@ PUB_TOPIC = "outTopic" #coming out of device
 SUB_TOPIC = "inTopic"  #coming into device
 
 #Change the following three settings to match your environment
-MQTT_HOST = "iKnowKungFuees-ats.iot.us-east-1.amazonaws.com"  #use your own regionial AWS IoT endpoint
+MQTT_HOST = "iKnowKungFuees-ats.iot.us-east-1.amazonaws.com"  #use your own regional AWS IoT endpoint
 WIFI_SSID = "<Your-WiFi-Network-Name-Here>"
 WIFI_PW = "<Your-WiFi-Password>"
 
@@ -54,13 +54,13 @@ def pub_msg(msg):  #publish is synchronous so we poll and publish
 
 def sub_cb(topic, msg):
     print('Device received a Message: ')
-    print((topic, msg))  #print incoing message, waits for loop below
+    print((topic, msg))  #print incoming message, waits for loop below
     pin.value(0) #blink if incoming message by toggle off
 
 def connect_mqtt():    
     global MQTT_CLIENT
 
-    try:  #all this below runs once ,eqivealent to Arduino's "setup" function)
+    try:  #all this below runs once ,equivalent to Arduino's "setup" function)
         with open(KEY_FILE, "r") as f: 
             key = f.read()
         print("Got Key")
@@ -88,7 +88,7 @@ try:
     connect_mqtt()
     while True: #loop forever
             pin.value(1)
-            new_message = MQTT_CLIENT.check_msg()  # check for new subsciption payload incoming
+            new_message = MQTT_CLIENT.check_msg()  # check for new subscription payload incoming
             if new_message != 'None':  #check if we have a message and continue to publish, if so then get the message
                 temp =  random.randint(0, 130)
                 humid = random.randint(0, 100)
