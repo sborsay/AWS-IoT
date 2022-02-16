@@ -1,14 +1,3 @@
-#For Windows install 'Git for Windows' then openSSL can be found in-->  C:\Program Files\Git\usr\bin>
-#openssl x509 -in 5d93250f80-certificate.pem.crt -out  ClientCert.cert.der -outform DER
-#openssl rsa -in 5d93250f80-private.pem.key -out  privateKey.key.der -outform DER
-
-#AWS MQTT client cert example for esp8266, this sketch is a combination of various sources:
-#https://awsiot.wordpress.com/2019/01/10/connect-8266-to-aws-mqtt-using-miropython/
-#https://randomnerdtutorials.com/micropython-mqtt-esp32-esp8266/
-#https://forum.micropython.org/viewtopic.php?t=5166
-#original code added by Stephen Borsay for Udemy Course
-
-
 #AWS MQTT Connect Pub/Sub
 from umqtt.robust import MQTTClient
 import time
@@ -34,10 +23,9 @@ MQTT_HOST = "IKnowKungFuees-ats.iot.us-east-1.amazonaws.com"  #Your AWS IoT Endp
 WIFI_SSID = "<Your-WiFi-Network>"
 WIFI_PW = "<Your-WiFi-Password>"
 
-MQTT_CLIENT = None  #empty obecjt
+MQTT_CLIENT = None  #empty object
 
 print("Starting program...")
-
 def do_connect():
     print("In connect method")
     import network
@@ -62,7 +50,7 @@ def pub_msg(msg):  #publish is synchronous so we poll and publish
 
 def sub_cb(topic, msg):
     print('Device received a Message: ')
-    print((topic, msg))  #print incoing message asychronously
+    print((topic, msg))  #print incoming message asynchronously
     pin.value(0) #blink if incoming message by toggle off
 
 def connect_mqtt():    
@@ -100,9 +88,9 @@ try:
     print("Entering Loop")
     while True: #loop forever
             pin.value(1)
-            new_message = MQTT_CLIENT.check_msg()  # check for new subsciption payload incoming
+            new_message = MQTT_CLIENT.check_msg()  # check for new subscription payload incoming
             if new_message != 'None':  #check if we have a message and continue to publish, if so then get the message
-                temp = (time.time())%99   #random.randint(0, 100)  because randomint doesnt work
+                temp = (time.time())%99   #random.randint(0, 100)  because randomint doesn't work
                 humid = (time.time())%98  #random.randint(0, 100)
                 deviceTime = time.time()
                 pub_msg("{\n  \"temperature\": %d,\n  \"humidity\": %d,\n  \"timestamps\": %d\n}"%(temp,humid,deviceTime))
