@@ -22,7 +22,7 @@ PUB_TOPIC = "outTopic" #coming out of device
 SUB_TOPIC = "inTopic"  #coming into device
 
 #Change the following three settings to match your environment
-MQTT_HOST = "iKnowKungFuees-ats.iot.us-east-1.amazonaws.com"  #use your own regional AWS IoT endpoint
+MQTT_HOST = "iKnowKungFuees-ats.iot.us-east-1.amazonaws.com"  #Your AWS IoT Endpoint IoT Core-->Settings or > aws iot describe-endpoint --endpoint-type iot:Data-ATS
 WIFI_SSID = "<Your-WiFi-Network-Name-Here>"
 WIFI_PW = "<Your-WiFi-Password>"
 
