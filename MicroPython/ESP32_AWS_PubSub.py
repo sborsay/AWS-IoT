@@ -15,10 +15,9 @@ pin = machine.Pin(2)  #blinking is optional, check your LED pin
 CERT_FILE = "/<Your-Client-Cert-Here>.pem.crt"  #the ".crt" may be hidden in your file system but it is saved from AWS with this extension
 KEY_FILE = "/<Your-Private-Key-Here>.pem.key"
 
-#If you change the ClientId make sure update AWS policy
+#Make a new ClientId for each device
 MQTT_CLIENT_ID = "CurtesyFlush08"
 MQTT_PORT = 8883 #MQTT secured
-#if you change the topic make sure update AWS policy
 PUB_TOPIC = "outTopic" #coming out of device
 SUB_TOPIC = "inTopic"  #coming into device
 
