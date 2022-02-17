@@ -1,6 +1,6 @@
 
 
-![#f03c15]- Cannot connect MQTT: bytes index out of range
+- ![#f03c15]- Cannot connect MQTT: bytes index out of range
 bytes index out of range `#f03c15`
 
 
