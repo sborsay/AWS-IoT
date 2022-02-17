@@ -1,7 +1,13 @@
+```diff
+- Cannot connect MQTT: bytes index out of range
+bytes index out of range 
++ text in green
+! text in orange
+# text in gray
+@@ text in purple (and bold)@@
+```
 
 
-- ![#f03c15]- Cannot connect MQTT: bytes index out of range
-bytes index out of range `#f03c15`
 
 
 
