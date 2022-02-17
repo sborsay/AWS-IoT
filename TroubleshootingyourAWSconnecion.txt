@@ -10,6 +10,8 @@ Troubleshooting ESP8266 and ESP32 connection issues.
 
 3.  Make sure your onboard device certificates match your AWS IoT Core region, the x509 should be fungible between regions
 
+3B.  Make sure the AWS Endpoint region you have in listed in your sketh matchs the region in yourt AWS Console.
+
 4.  Make sure you attached an AWS IoT Policy to your security certificates.  If you have not you will see the connection on the 
     monitor tab but no data will appear on the MQTT test console.
 
