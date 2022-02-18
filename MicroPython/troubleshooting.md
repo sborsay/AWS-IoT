@@ -6,20 +6,10 @@
 
 ```
 
+//from https://acoptex.com/project/11901/basics-project-086p-esp32-development-board-using-thonny-ide-at-alek-c/
+
 If it doesn't work for you check the solutions below:
 
-If you are getting an error: = RESTART = Unable to connect to COM4 Error: could not open port 'COM4': FileNotFoundError(2, 
-'The system cannot find the file specified.', None, 2) Check the configuration, select Run -> Stop/Restart or press Ctrl+F2 
-to try again. (On some occasions it helps to wait before trying again.) or = RESTART = Could not connect to REPL.Make sure
- your device has suitable firmware and is not in bootloader mode!Disconnecting or = RESTART = Lost connection to the device
- (EOF). Disconnect and connect your ESP32 development board. Then, double-check that you selected correct serial port in the 
-Tools -> Options... -> Interpreter -> Port. Click on Stop/Restart backend button to establish a serial communication.
- You should now be able to upload a new script or re-run new code. These errors might also mean that you have your
- serial port being used in another program (like a serial terminal or in the Arduino IDE). Double-check that you
- closed all the programs that might be establishing a serial communication with your ESP32 development board.
- Disconnect and connect your ESP32 development board again. Do restart Thonny IDE.
-
-//from https://acoptex.com/project/11901/basics-project-086p-esp32-development-board-using-thonny-ide-at-alek-c/
 
 1. If you are getting an error: = RESTART = Unable to connect to COM4 Error: could not open port 'COM4': FileNotFoundError
 (2, 'The system cannot find the file specified.', None, 2) Check the configuration, select Run -> Stop/Restart or press
