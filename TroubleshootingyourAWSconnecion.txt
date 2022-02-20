@@ -39,7 +39,7 @@ Connecting........_____....._____....._____....._____....._____....._____.....__
 A fatal error occurred: Failed to connect to ESP32: Timed out waiting for packet header
 
 Solution:
-while connecting holding down the Boot/EN button for one second initiates the firmware download mode
+while connecting holding down the Boot button for one second initiates the firmware download mode
 BOOT = FLASH
 
 Warning: 
