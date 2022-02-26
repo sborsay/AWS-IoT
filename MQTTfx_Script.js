@@ -2,7 +2,7 @@
 
 var Thread = Java.type("java.lang.Thread");
 
-var topic = "outTopic";
+var topic = "iot/mqttfx";
 var waitTime = 2000;
 var iterations = 10;
 
@@ -21,21 +21,23 @@ function execute(action) {
 
 function sendPayload() {
 	
-    var temp = Math.round(Math.random()*130);
-    var humid = Math.round(Math.random()*100);
-    var ts = Date.now();
+	var temp = Math.round(Math.random()*130);
+	var humid = Math.round(Math.random()*100);
+	var ts = Date.now();
+	
+	var IoT_Payload = { 
+		  "temperature" :  temp, 
+		  "humidity"    :  humid, 
+		  "timestamps"  :  ts
+		}
 
-    var IoT_Payload = { 
-	  "temperature" :  temp, 
-	  "humidity"    :  humid, 
-	  "timestamps"  :  ts
-	}
+var payload = JSON.stringify(IoT_Payload)
 
-    var payload = JSON.stringify(IoT_Payload)
 
-    out("payload sent");
-    mqttManager.publish(topic, payload);
+	out("payload sent: \n" + payload);
+	mqttManager.publish(topic, payload);
 }
+
 
 function out(message){
      output.print(message);
