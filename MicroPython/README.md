@@ -19,7 +19,7 @@ ESP8266:
 
 > https://micropython.org/download/esp8266/
 
-Erase your ESP chips flash memory with the esptool.:
+Erase your ESP chips flash memory with the esptool, use "run as aministrator" mode" for Command prompt:
 
 ESP32:    
 ```
