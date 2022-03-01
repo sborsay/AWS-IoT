@@ -37,13 +37,13 @@ Upload the ESP MicroPython Firmware:
 
 ESP32:
 ```
-python -m esptool --chip esp32 --port COM<YOUR-COM-PORT-HERE> write_flash -z 0x1000 esp32-2019-Latest-<YOUR-BIN-HERE>.bin
+python -m esptool --chip esp32 --port COM<YOUR-COM-PORT-HERE> write_flash -z 0x1000 esp32-<YOUR-BIN-HERE>.bin
 ```
 or
 
 ESP8266: 
 ```
-python -m esptool --chip esp8266 --port COM<YOUR-COM-PORT-HERE> write_flash --flash_mode dio --flash_size detect 0x0 esp8266-Latest-<YOUR-BIN-HERE>.bin
+python -m esptool --chip esp8266 --port COM<YOUR-COM-PORT-HERE> write_flash --flash_mode dio --flash_size detect 0x0 esp8266-<YOUR-BIN-HERE>.bin
 ```
 
 * Replace COM4 with whatever Com port your device is connected to
