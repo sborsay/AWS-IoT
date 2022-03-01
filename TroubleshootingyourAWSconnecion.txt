@@ -43,4 +43,4 @@ while connecting holding down the Boot button for one second initiates the firmw
 BOOT = FLASH
 
 Warning: 
-Do not press the Enable(EN)/RESET(RST) Button
+#Do not press the Enable(EN)/RESET(RST) Button
