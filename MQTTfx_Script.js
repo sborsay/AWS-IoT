@@ -35,6 +35,7 @@ var payload = JSON.stringify(IoT_Payload)
 
 
 	mqttManager.publish(topic, payload);
+	out("Topic is:  \n" + topic);
 	out("payload sent \n" + payload);
 }
 
