@@ -12,7 +12,7 @@ attach the policy called **AWSDataPipelineRole** (listed above) to the myDataPip
 Next
 
 
-Create Role one: call it somethign like: **myDataPipelineDefaultResourceRole**
+Create Role two: call it somethign like: **myDataPipelineDefaultResourceRole**
 
 attach the policy called **AmazonEC2RoleforDataPipelineRole** (listed above) to this role.
 (_Default policy for the Amazon EC2 Role for Data Pipeline service role_)
