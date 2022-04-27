@@ -6,7 +6,7 @@ Create these default roles if this option is not showing up in your data pipleli
 
 Create Role one: call it somethign like: **myDataPipelineDefaultRole**
 
-attach the policy called **AWSDataPipelineRole** (listed above) to the myDataPipelineDefaultRole role.
+Create a policy called something like  **myAWSDataPipelineRole** (listed above) to the myDataPipelineDefaultRole role.
 (_Default policy for the myDataPipelineDefaultRole for Data Pipeline service role_)
 
 Next
@@ -14,6 +14,6 @@ Next
 
 Create Role two: call it somethign like: **myDataPipelineDefaultResourceRole**
 
-attach the policy called **AmazonEC2RoleforDataPipelineRole** (listed above) to this role.
+Create a  policy called somwthing like **myAmazonEC2RoleforDataPipelineRole** (listed above) to this role.
 (_Default policy for the myDataPipelineDefaultResourceRole for Data Pipeline service role_)
 
