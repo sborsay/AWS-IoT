@@ -6,7 +6,7 @@ Create these default roles in AWS IAM service  if this option is not showing up 
 ![image](https://user-images.githubusercontent.com/16296900/165595202-3a405fbd-4bf1-401f-9ee8-53796672b67b.png)
 
 
-Create Role one: Nme it somethign like: **myDataPipelineDefaultRole**
+Create Role one: Name it somethign like: **myDataPipelineDefaultRole**
 
 Create a policy called something like  **myAWSDataPipelineRole** (listed above) to the myDataPipelineDefaultRole role.
 (_Default policy for the myDataPipelineDefaultRole for Data Pipeline service role_)
