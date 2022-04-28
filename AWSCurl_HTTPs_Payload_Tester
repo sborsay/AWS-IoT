@@ -21,7 +21,7 @@ a04r7f8ee71-private.pem.key --> private.pem.key
 C:\Program Files>where curl.exe
 C:\Program Files\Git\mingw64\bin\curl.exe
 C:\Windows\System32\curl.exe
-//use mingw64 verion in same directory as curl.exe
+//use mingw64 version in same directory as curl.exe, do not use Windows defualt system32 version- it won't work
 
 //try this first from the prompt in same directory as your Linux based curl.exe in windows, with certificates in the sam directory
 
