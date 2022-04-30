@@ -1,9 +1,8 @@
 /* ESP32 AWS IoT
  *  
- * Simplest possible example (that I could come up with) of using an ESP32 with AWS IoT.
- *  
  * Author: Anthony Elder 
  * License: Apache License v2
+ * Alse see https://github.com/earlephilhower/bearssl-esp8266  for contributions
  * Sketch Modified by Stephen Borsay for www.udemy.com and AWS IoT Live Workshops
  * https://github.com/sborsay
  * Add in Char buffer utilizing sprintf to dispatch JSON data to AWS IoT Core
