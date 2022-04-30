@@ -35,7 +35,7 @@ curl --tlsv1.2 --cacert Amazon-root-CA-1.pem --cert client.pem.crt --key private
 
 curl --tlsv1.2 ^
     --cacert Amazon-root-CA-1.pem ^
-    --cert client.pem.crt ^
+    --cert certificate.pem.crt ^
     --key private.pem.key ^
     --request POST ^
     --data "{\"Temperature\": 77, \"Humidity\": 88, \"Time\": 12349876,\"Device_ID\": \"device_4\"}" ^
@@ -44,7 +44,7 @@ curl --tlsv1.2 ^
 //this is for Linux, certificates in same directory as where you dispatch cURL commands
 curl --tlsv1.2 \
     --cacert Amazon-root-CA-1.pem \
-    --cert client.pem.crt \
+    --cert certificate.pem.crt \
     --key private.pem.key \
     --request POST \
     --data "{\"Temperature\": 77, \"Humidity\": 88, \"Time\": 12349876,\"Device_ID\": \"device_4\"}" \
