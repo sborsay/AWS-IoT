@@ -1,16 +1,16 @@
 /* ESP8266 AWS IoT
  *  
- ----------------------------
- 
- ##Compile this only if using ESP8266 version 3+, not backwards comparable
- 
- #Tools--> Board--> Board Manager-->ESP8266 version 3+ by ESP8266 Community
- 
- ##Older ESP8266 sketch is not forward compatible
- 
- --------------------------------
- 
- 
+ * ----------------------------
+ *
+ * Compile this only if using ESP8266 version 3+, not backwards compatable
+ *
+ * Tools--> Board--> Board Manager-->ESP8266 version 3+ by ESP8266 Community
+ *
+ * Older ESP8266 sketch is not forward compatible
+ *
+ * --------------------------------
+ *
+ *
  * Simplest possible example (that I could come up with) of using an ESP8266 with AWS IoT.
  * No messing with openssl or spiffs just regular pubsub and certificates in string constants
  *
@@ -158,7 +158,7 @@ void loop() {
   sprintf(fakeData,  "{\"uptime\":%lu,\"temperature\":%f,\"humidity\":%f}", millis() / 1000, var1, var2);
   
   if (millis() - lastPublish > 5000) {
-  boolean rc = pubSubClient.publish("outTopic", fakeData);
+    boolean rc = pubSubClient.publish("outTopic", fakeData);
     Serial.print("Published, rc=");
     Serial.print( (rc ? "OK: " : "FAILED: ") );
     Serial.println(fakeData);
