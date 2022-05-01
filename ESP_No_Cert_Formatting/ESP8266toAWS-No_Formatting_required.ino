@@ -1,4 +1,14 @@
 /* ESP8266 AWS IoT
+ *
+ * ----------------------------
+ *
+ * Compile this only if using ESP8266 version 2.74 or below, not forwards compatable
+ *
+ * Tools--> Board--> Board Manager-->ESP8266 version 2.74 or below by ESP8266 Community
+ *
+ * Newer ESP8266 sketch in other folder is not backwards compatible
+ *
+ * --------------------------------
  *  
  * Simplest possible example (that I could come up with) of using an ESP8266 with AWS IoT.
  * No messing with openssl or spiffs just regular pubsub and certificates in string constants
@@ -165,9 +175,6 @@ void loop() {
   float var1 =  random(55,77); //fake number range, adjust as you like
   float var2 =  random(77,99);
   sprintf(fakeData,  "{\"uptime\":%lu,\"temp\":%f,\"humid\":%f}", millis() / 1000, var1, var2);
-
-
-  
 
   if (millis() - lastPublish > 10000) {
     String msg = String("Hello from ESP8266: ") + ++msgCount;
