@@ -3,6 +3,7 @@
 #https://awsiot.wordpress.com/2019/01/10/connect-8266-to-aws-mqtt-using-miropython/
 #https://forum.micropython.org/viewtopic.php?t=5166
 #original code added by Stephen Borsay for Udemy Course and AWS IoT Book
+# “bytes index out of range”  error often cause by incorrect endpoint/wrong region
 
 from umqtt.robust import MQTTClient
 import time
