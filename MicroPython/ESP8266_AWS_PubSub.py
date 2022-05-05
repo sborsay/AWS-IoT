@@ -1,4 +1,9 @@
 #AWS MQTT Connect Pub/Sub
+#AWS MQTT client cert example for esp8266, this sketch is a combination of various sources:
+#https://awsiot.wordpress.com/2019/01/10/connect-8266-to-aws-mqtt-using-miropython/
+#https://forum.micropython.org/viewtopic.php?t=5166
+#original code added by Stephen Borsay for Udemy Course and AWS IoT Book
+
 from umqtt.robust import MQTTClient
 import time
 import random
@@ -62,12 +67,12 @@ def device_connect():
         with open(KEY_FILE, "r") as f: 
             key = f.read()
 
-        print("Got Key")
+        print("set private Key")
             
         with open(CERT_FILE, "r") as f: 
             cert = f.read()
 
-        print("Got Cert")
+        print("set client Cert")
 
         MQTT_CLIENT = MQTTClient(client_id=MQTT_CLIENT_ID, server=MQTT_HOST, port=MQTT_PORT, keepalive=5000, ssl=True, ssl_params={"cert":cert, "key":key, "server_side":False})
         MQTT_CLIENT.connect()
