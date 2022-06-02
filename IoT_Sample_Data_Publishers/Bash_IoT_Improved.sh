@@ -1,4 +1,7 @@
-#!/bin/bash
+#  Adjecsted for AWS CLI Version 2, Stephen Borsay
+#  Original code found at: https://aws.amazon.com/blogs/iot/integrating-iot-data-with-your-data-lake-with-new-aws-iot-analytics-features/
+#  Changes: changed iterations to 3, refined random algorithm, eliminated superflous variables.
+
 mqtttopic='<Insert-Your-IoT-Topic-Here>'
 iterations=10
 wait=3
