@@ -19,7 +19,7 @@
  *
  * Author: Anthony Elder
  * License: Apache License v2
- *
+ *  Also see:  https://github.com/Ameba8195/Arduino/blob/master/hardware_v2/libraries/MQTTClient/examples/amazon_awsiot_basic/amazon_awsiot_basic.ino
  * Sketch Modified by Stephen Borsay for www.udemy.com/course/exploring-aws-iot/
  * https://github.com/sborsay
  * Add in EOF certificate delimiter
