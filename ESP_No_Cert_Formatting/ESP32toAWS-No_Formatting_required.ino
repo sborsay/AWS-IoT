@@ -2,7 +2,8 @@
  *  
  * Author: Anthony Elder 
  * License: Apache License v2
- * Alse see https://github.com/earlephilhower/bearssl-esp8266  for contributions
+ * Also see https://github.com/earlephilhower/bearssl-esp8266  for contributions
+ * https://github.com/Ameba8195/Arduino/blob/master/hardware_v2/libraries/MQTTClient/examples/amazon_awsiot_basic/amazon_awsiot_basic.ino
  * Sketch Modified by Stephen Borsay for www.udemy.com and AWS IoT Live Workshops
  * https://github.com/sborsay
  * Add in Char buffer utilizing sprintf to dispatch JSON data to AWS IoT Core
