@@ -1,6 +1,7 @@
 #AWS MQTT Connect Pub/Sub
 #AWS MQTT client cert example for esp8266, this sketch is a combination of various sources:
 #https://awsiot.wordpress.com/2019/01/10/connect-8266-to-aws-mqtt-using-miropython/
+#https://github.com/digidotcom/xbee-micropython/blob/master/samples/cellular/aws
 #https://forum.micropython.org/viewtopic.php?t=5166
 #original code added by Stephen Borsay for Udemy Course and AWS IoT Book
 # “bytes index out of range”  error often cause by incorrect endpoint/wrong region
