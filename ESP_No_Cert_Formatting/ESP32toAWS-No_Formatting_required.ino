@@ -131,7 +131,13 @@ void loop() {
 
   float var1 =  random(55,77); //fake number range, adjust as you like
   float var2 =  random(77,99);
-  sprintf(fakeData,  "{\"uptime\":%lu,\"temp\":%f,\"humid\":%f}", millis() / 1000, var1, var2);
+  
+  //long float format, takes up a lot of the allocated char buffer
+  // sprintf(fakeData,  "{\"uptime\":%lu,\"temp\":%f,\"humid\":%f}", millis() / 1000, var1, var2);
+  
+  //shorter float format, saves space, makes AWS services slightly easier
+  sprintf(fakeData,  "{\"uptime\":%lu,\"temp\":%.0f,\"humid\":%.0f}", millis() / 1000, var1, var2);
+ 
 
 
   if (millis() - lastPublish > 10000) {
