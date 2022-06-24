@@ -155,7 +155,13 @@ void loop() {
 
   float var1 =  random(0,120); //fake number range, adjust as you like
   float var2 =  random(0,100);
-  sprintf(fakeData,  "{\"uptime\":%lu,\"temperature\":%f,\"humidity\":%f}", millis() / 1000, var1, var2);
+  
+  //long float format, takes up a lot of the allocated char buffer
+  // sprintf(fakeData,  "{\"uptime\":%lu,\"temperature\":%f,\"humidity\":%f}", millis() / 1000, var1, var2);
+  
+  //shorter float format, saves space, makes AWS services slightly easier
+  sprintf(fakeData,  "{\"uptime\":%lu,\"temperature\":%.0f,\"humidity\":%.0f}", millis() / 1000, var1, var2);
+  
   
   if (millis() - lastPublish > 5000) {
     boolean rc = pubSubClient.publish("outTopic", fakeData);
