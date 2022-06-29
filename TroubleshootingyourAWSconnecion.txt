@@ -29,7 +29,12 @@ Troubleshooting ESP8266 and ESP32 connection issues.
     If your device isn't even showing up in the monitor, then it is likely a hardware issue not a certificate issue.
     Confirm you are using the correct virtualization package or board manager for your device.
     
-    7.  For the ESP8266 only:  Make sure you are using the right version of the sketch for your Arduino Board Manager.  If you are not receiving
+ 7. Does you serial monitor look like:   *M???
+                                         ????????%^&???*^$#$^
+                                         
+    Mae sure you serial monitor 'Buad" rate matches your sketch (probably 115200)
+    
+ 8.  For the ESP8266 only:  Make sure you are using the right version of the sketch for your Arduino Board Manager.  If you are not receiving
      input on AWS IoT Core it because you could be using the wrong ESP8266 sketch for your current Arduino Board Manager package.
 
 ----------------------------------------------------------------------------
