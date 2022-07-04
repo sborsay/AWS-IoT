@@ -2,7 +2,7 @@
 #https://awsiot.wordpress.com/2019/01/10/connect-8266-to-aws-mqtt-using-miropython/
 #https://github.com/digidotcom/xbee-micropython/blob/master/samples/cellular/aws/
 #https://forum.micropython.org/viewtopic.php?t=5166
-#original code added by Stephen Borsay for Udemy Course
+#Original code added by Stephen Borsay for Udemy Course
 
 from umqtt.robust import MQTTClient
 import time
@@ -10,15 +10,14 @@ import random
 import machine
 pin = machine.Pin(2)  #blinking is optional, check your LED pin
 
-#Place these Certs at same folder level as your MicroP#AWS MQTT client example for esp32, this sketch is a combination of various sources:
+#Place these two certs at same folder level as your MicroPython program
 
 CERT_FILE = "/certificate.pem.crt"  #the ".crt" may be hidden that’s ok
 KEY_FILE = "/private.pem.key"
 
-#If you change the ClientId make sure update AWS policy
 MQTT_CLIENT_ID = "CurtesyFlush88"
 MQTT_PORT = 8883 #MQTT secured
-#if you change the topic make sure update AWS policy
+
 PUB_TOPIC = "iot/outTopic" #coming out of device
 SUB_TOPIC = "iot/inTopic"  #coming into device
 
