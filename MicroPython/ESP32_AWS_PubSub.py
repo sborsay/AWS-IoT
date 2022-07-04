@@ -1,7 +1,6 @@
 #AWS MQTT client example for esp32, this sketch is a combination of various sources:
 #https://awsiot.wordpress.com/2019/01/10/connect-8266-to-aws-mqtt-using-miropython/
 #https://github.com/digidotcom/xbee-micropython/blob/master/samples/cellular/aws/
-#https://randomnerdtutorials.com/micropython-mqtt-esp32-esp8266/
 #https://forum.micropython.org/viewtopic.php?t=5166
 #original code added by Stephen Borsay for Udemy Course
 
