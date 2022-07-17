@@ -1,49 +1,38 @@
 Troubleshooting ESP8266 and ESP32 connection issues.
 
+1.  Make sure you are on a 2.4GHz network, and not 5GHz, the ESP IoT device only communicates at 2.4GHz.
 
-1.  Make sure you are on a 2.4GHz network not 5GHz, the device only communicates at 2.4GHz
+2.  Make sure your IoT device AWS endpoint region matches the current AWS region in your console and on the browser.
 
-2.  Make sure your device AWS endpoint region matches the current AWS region in your console and on the browser
+3.  Make sure port 8883 on your computer isn't being blocked by your network admin, this is the port that MQTT(s) traditionally communicates.  AWS IoT Core requires you send MQTT data over secure port 8883 or 443.
 
-3.  Make sure port 8883 isn't being blocked by your network admin, this is the port that MQTT(s) traditionally communicates,
-    AWS IoT Core requires you send MQTT data over secure port 8883 or 443
+4.  Make sure your onboard device security certificates match your AWS IoT Core region, the x509 is fungible between regions.
 
-4.  Make sure your onboard device security certificates match your AWS IoT Core region, the x509 is fungible between regions
+5.  Make sure you attached an AWS IoT Policy to your security certificates.  If you have not, you will see the connection on the monitor tab, but no data will appear on the MQTT test client.
 
-5.  Make sure you attached an AWS IoT Policy to your security certificates.  If you have not you will see the connection on the 
-    monitor tab but no data will appear on the MQTT test console.
+6.  Don't exceed your char, sprintf, or snprintf buffer in your Arduino sketch.  The MQTT protocol requires payloads get sent by time and size over cycles.  If you overload the buffer, the device may not transmit or receive the payload.   To solve this issue for large payloads in your sketch you can increase the size of your buffer by changing the value of MQTT_MAX_PACKET_SIZE constant in the PubSubClient.h header file from 128 to 256 or 512 bytes to solve this issue.  This bigger payload allocation will allow longer buffer payloads to be transmitted. 
 
-6.  Don't exceed your Char, sprintf, or snprintf buffer.  The MQTT protocol requires payloads get sent by time and size over cycles.
-    If you overload the buffer it may not transmit or receive the payload.   To solve this issue for large payloads you
-    can also increase the size of your MQTT Buffer by changing the value of MQTT_MAX_PACKET_SIZE in PubSubClient.h from 128 to 256 or 512
-    to solve this issue.  This bigger payload allocation will allow longer variable payloads to transmit. 
+7. If you aren't receiving your devices payload under your subscription topic in AWS IoT Core in the on the MQTT test client, then go to the "Monitor" tab in AWS IoT Core and see if your device is even connecting.  Often a IoT device is connecting but the payload isn't being received, the reason for this is usually a problem with your device security certificates.  The IoT device will connect but the payload won’t pass through if your device certificates aren't activated correctly and have an attached IoT policy.  The problem could also be the issue listed previously as the MQTT max payload buffer is exceeded. 
 
-7.  If you aren't receiving your devices payload under your subscription topic in AWS IoT Core in the "test" tab,
-    then go to the "Monitor" tab in AWS IoT Core and see if your device is even connecting.  Often a IoT device is connecting
-    but the payload isn't being received, the reason for this is usually a problem with your device security certificates.
-    The IoT device will connect but the payload won’t pass through if your device certificates aren't activated correctly and have an attached IoT policy.
-    If your device connection isn't even showing up in the monitor, then it is likely a hardware issue not a certificate issue.
-    Confirm you are using the correct virtualization package or board manager for your device.
+If your device connection isn't even showing up in the monitor, then it is likely a hardware issue not a certificate issue.  Confirm you are using the correct virtualization package or board manager for your device.
     
  8. Does your serial monitor look like:   *M???
                                          ????????%^&???*^$#$^
                                          
-    Make sure you serial monitor baud rate matches your sketch baud rate (probably 115200)
+After running your Arduino sketch?   Make sure your serial monitor baud rate matches your sketch baud rate (probably 115200).
     
- 9.  For the ESP8266 only:  Make sure you are using the right version of the sketch for your Arduino Board Manager.  If you are not receiving
-     input on AWS IoT Core it because you could be using the wrong ESP8266 sketch for your current Arduino Board Manager package.
+ 9.  For the ESP8266 only:  Make sure you are using the right version of the sketch for your Arduino Board Manager.  If you are not receiving IoT payloads on AWS IoT Core, it could be because you are using the wrong ESP8266 sketch for your current Arduino Board Manager package.
 
-----------------------------------------------------------------------------
-Some older or cheaper ESP32 Boards:
 
-Connecting........_____....._____....._____....._____....._____....._____....._____....._____....._____....._____
+Some older or cheaper ESP32 board issues:
+
+Connecting........_____....._____....._____....._____....._____....._____....._____....._____....._____
 A fatal error occurred: Failed to connect to ESP32: Timed out waiting for packet header
 
 Solution:
-while connecting holding down the Boot button for one second initiates the firmware download mode
-BOOT = FLASH
+While connecting and holding down the ‘Boot’ button for one second initiates the firmware downloads mode (BOOT button = FLASH button).
 
 Warning: 
 # Do not press the Enable (EN)/RESET(RST) Button
 
-For a more extensive list see the github.
+For a more extensive list see the GitHub.
