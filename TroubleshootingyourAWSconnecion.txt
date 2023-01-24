@@ -17,12 +17,8 @@ IoT permissive policy should look like:
   "Statement": [
     {
       "Effect": "Allow",
-      "Action": [
-        "*"
-      ],
-      "Resource": [
-        "*"
-      ]
+      "Action": "*",
+      "Resource": "*"
     }
   ]
 }
