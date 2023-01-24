@@ -8,7 +8,7 @@ Troubleshooting ESP8266 and ESP32 connection issues.
 
 4.  Make sure your onboard device security certificates match your AWS IoT Core region, the x509 is fungible between regions.
 
-5.  Make sure you attached an AWS IoT Policy to your security certificates.  If you have not, you will see the connection on the monitor tab, but no data will appear on the MQTT test client.
+5.  Make sure you attached an AWS IoT Policy to your security certificates and activate it.  If you have not, you will see the connection on the monitor tab, but no data will appear on the MQTT test client.
 
 IoT permissive policy should look like:
 
