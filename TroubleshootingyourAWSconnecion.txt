@@ -6,7 +6,7 @@ Troubleshooting ESP8266 and ESP32 connection issues.
 
 3.  Make sure port 8883 on your computer isn't being blocked by your network admin, this is the port that MQTT(s) traditionally communicates.  AWS IoT Core requires you send MQTT data over secure port 8883 or 443.
 
-4.  Make sure your onboard device security certificates match your AWS IoT Core region, the x509 is fungible between regions.
+4.  Make sure your onboard device security certificates match your AWS IoT Core region.  The RootCA x509 certificate is fungible between regions, but the client and private certs are not.
 
 5.  Make sure you attached an AWS IoT Policy to your security certificates and activate it.  If you have not, you will see the connection on the monitor tab, but no data will appear on the MQTT test client.
 
