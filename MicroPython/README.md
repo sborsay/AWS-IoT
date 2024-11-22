@@ -11,7 +11,7 @@
 
 Download latest Binary:
 
-Use the updated MicroPythin program when installing Firmware more recent than:
+### Use the updated MicroPython program when installing Firmware more recent than:
 Releases  v1.23.0 (2024-06-02) .bin
 
 ESP32: 
